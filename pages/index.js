@@ -1,13 +1,13 @@
-import react from 'react';
+import React from 'react';
 import Head from 'next/head';
 import styled from 'styled-components';
 import Header from '../components/Header';
+import Hero from '../components/Hero';
+import Banner from '../components/Banner';
+import CategoryTile from '../components/CategoryTile';
+import Footer from '../components/Footer';
 
-const StyledHomePage = styled.main`
-  position: relative;
-  min-height: 100vh;
-  min-width: 375px;
-`;
+const StyledHomePage = styled.main``;
 
 export default function HomePage() {
 
@@ -20,6 +20,13 @@ export default function HomePage() {
     ogDescription:
       'Hot air ballooning banners, equipment and repair station since 1975',
     canonicalUrl: 'https://www.stumpfballoons.com',
+  };
+
+  const images = {
+    repairstation: '/images/repair-station.jpg',
+    catalog: '/images/equipment-catalog.jpg',
+    banners: '/images/banners.jpg',
+    balloonbuilding: '/images/balloon-building.jpg',
   };
 
   return (
@@ -40,9 +47,15 @@ export default function HomePage() {
         <link rel="canonical" href={headData.canonicalUrl} />
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"/>
       </Head>
-
+      <Header/>
       <StyledHomePage id="maincontent">
-        <Header/>
+        <Hero/>
+        <Banner />
+        <CategoryTile img={images.repairstation} alt='photo of pauls repair station' text='Repair Station' url='/repair-station' />
+        <CategoryTile img={images.catalog} alt='photo of pauls repair station' text='Equipment Catalog' url='/equipment-catalog' />
+        <CategoryTile img={images.banners} alt='photo of pauls repair station' text='Banners' url='/banners' />
+        <CategoryTile img={images.balloonbuilding} alt='photo of pauls repair station' text='Balloon Building' url='/balloon-building' />
+        <Footer />
       </StyledHomePage>
     </>
   )

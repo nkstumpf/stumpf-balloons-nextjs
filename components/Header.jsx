@@ -28,8 +28,8 @@ const StyledTopBar = styled.div `
   top: 0px;
   left: 0px;
   width: 100%;
-  z-index: 20;
-  height: 70px;
+  z-index: 40;
+  height: 80px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -56,7 +56,7 @@ const StyledTopBar = styled.div `
 `
 
 const StyledNav = styled.nav `
-  z-index: 0;
+  z-index: 30;
   position: fixed;
   overflow: hidden;
   top: -230px;
@@ -95,6 +95,7 @@ const StyledNav = styled.nav `
 
     & li:hover {
         background-color: black;
+        cursor: pointer;
 
         & a {
             color: white;
@@ -134,14 +135,13 @@ export default class Header extends React.Component {
     handleOpenNav = () => {
       this.setState({isOpen: true});
       const navbarStyles = this.mobileNav.current.style;
-      navbarStyles.top = '70px';
+      navbarStyles.top = '80px';
 
     }
   
     handleCloseNav = () => {
       this.setState({isOpen: false});
       this.mobileNav.current.style.top = '-230px';
-
     }
     
     render() {
