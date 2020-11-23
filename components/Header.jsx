@@ -40,8 +40,8 @@ const StyledTopBar = styled.div `
   }
 
   .logo {
-      font-size: 28px;
-      font-family: 'Nunito', sans-serif;
+      font-family: ${(props) => props.theme.fonts.heading};
+      font-size: ${(props) => props.theme.fonts.sizes.headinglg};
   }
 
   .sb-icon {
@@ -76,8 +76,8 @@ const StyledNav = styled.nav `
 
     & a {
         color: black;
-        font-family: 'Nunito', sans-serif;
-        font-size: 20px;
+        font-family: ${(props) => props.theme.fonts.heading};
+        font-size: ${(props) => props.theme.fonts.sizes.headingsm};
     }
 
     & a:hover {

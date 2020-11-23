@@ -24,7 +24,7 @@ const theme = {
         },
     },
     fonts: {
-      heading: "Helvetica",
+      heading: 'Nunito, sans-serif',
       body: "Arial",
       accent: "sans-serif",
       weights: {

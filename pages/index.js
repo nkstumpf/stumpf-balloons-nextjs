@@ -45,7 +45,6 @@ export default function HomePage() {
         <meta property="og:type" content={headData.ogType} />
         <meta property="og:description" content={headData.ogDescription} />
         <link rel="canonical" href={headData.canonicalUrl} />
-        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"/>
       </Head>
       <Header/>
       <StyledHomePage id="maincontent">
