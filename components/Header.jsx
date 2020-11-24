@@ -40,8 +40,8 @@ const StyledTopBar = styled.div `
   }
 
   .logo {
-      font-family: ${(props) => props.theme.fonts.heading};
-      font-size: ${(props) => props.theme.fonts.sizes.headinglg};
+    font-family: ${(props) => props.theme.fonts.logo};
+    font-size: ${(props) => props.theme.fonts.sizes.headinglg};
   }
 
   .sb-icon {

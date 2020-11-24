@@ -1,12 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-const StyledSection = styled.section ``
+const StyledSection = styled.section `
+    height: 375px;
+`
 
-export default function Page() {
+export default function Banners() {
     return (
-        <StyledSection>
-            <h1>Test Content</h1>
-        </StyledSection>
+        <>
+            <Header />
+            <StyledSection>
+                <h1>Banners</h1>
+            </StyledSection>
+            <Footer />
+        </>
     )
 }

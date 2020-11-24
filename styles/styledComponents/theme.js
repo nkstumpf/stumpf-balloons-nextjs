@@ -24,8 +24,9 @@ const theme = {
         },
     },
     fonts: {
-      heading: 'Nunito, sans-serif',
-      body: "Arial",
+      logo: 'Nunito, sans-serif',
+      heading: 'Noto Sans JP, sans-serif',
+      body: 'Noto Sans JP, sans-serif',
       accent: "sans-serif",
       weights: {
         light: 300,
