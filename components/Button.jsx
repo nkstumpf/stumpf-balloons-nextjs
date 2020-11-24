@@ -20,10 +20,12 @@ const StyledButton = styled.button `
     }
 `
 
-export default function Button({ btnText, btnStyle }) {
+export default function Button({ btnText, btnUrl, btnStyle }) {
     return (
-        <StyledButton btnStyle={btnStyle}>
-            {btnText}
-        </StyledButton>
+        <Link href={btnUrl}>
+            <StyledButton btnStyle={btnStyle}>
+                {btnText}
+            </StyledButton>
+        </Link>
     )
 }

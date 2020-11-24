@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
-import { FileText } from 'react-feather';
+import { Camera, Facebook, Smile, Mail, User } from 'react-feather';
 
 const StyledFooter = styled.nav `
     height: 320px;
@@ -14,7 +14,15 @@ const StyledFooter = styled.nav `
         list-style: none;
 
         & li {
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            & svg {
+                color: ${(props) => props.theme.colors.text.light};
+                margin-right: 10px;
+            }
         }
 
         & li:last-child {
@@ -39,29 +47,33 @@ export default function Footer() {
         <StyledFooter>
             <ul>
                 <li>
+                    <User />
                     <Link href="/about">
                         <a>About</a>
                     </Link>
                 </li>
                 <li>
+                    <Mail />
                     <Link href="/contact">
                         <a>Contact</a>
                     </Link>
                 </li>
                 <li>
+                    <Smile />
                     <Link href="/testimonials">
                         <a>Testimonials</a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/photography">
+                    <Camera />
+                    <Link href="/photo-blog">
                         <a>Paul's Photography</a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/facebook">
-                        <a>Follow Paul on Facebook</a>
-                    </Link>
+                    <Facebook />
+                    <a href="https://www.facebook.com/psstumpf">Follow Paul on Facebook</a>
+                    
                 </li>
             </ul>
         </StyledFooter>

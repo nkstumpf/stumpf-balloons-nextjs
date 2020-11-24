@@ -13,12 +13,12 @@ const StyledSection = styled.section `
     }
 `
 
-export default function EquipmentCatalog() {
+export default function PhotoBlog() {
     return (
         <>
             <Header />
             <StyledSection>
-                <h1>Equipment Catalog</h1>
+                <h1>Paul's Photography</h1>
             </StyledSection>
             <Footer />
         </>

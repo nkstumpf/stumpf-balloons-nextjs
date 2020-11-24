@@ -15,6 +15,10 @@ const StyledBanner = styled.div `
     margin-bottom: 32px;
     text-align: center;
 
+    & a {
+        cursor: pointer;
+    }
+
     & h2 {
         color: ${(props) => props.theme.colors.text.accent};
         font-size: ${(props) => props.theme.fonts.sizes.headingsm};
@@ -26,15 +30,17 @@ const StyledBanner = styled.div `
         color: ${(props) => props.theme.colors.text.accent};
         width: 48px;
         height: 48px;
-        /* margin-left: 16px; */
+        
+        &:hover {
+            color: ${(props) => props.theme.colors.text.light};
+        }
     }
 `
 
 export default function Banner() {
     return (
         <StyledBanner>
-        {/* <h2>Check out our products and services!</h2> */}
-        <ArrowDownCircle />
+        <a href="#services-section"><ArrowDownCircle /></a>
         </StyledBanner>
     )
 }

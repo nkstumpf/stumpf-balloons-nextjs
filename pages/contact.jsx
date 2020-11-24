@@ -13,12 +13,13 @@ const StyledSection = styled.section `
     }
 `
 
-export default function EquipmentCatalog() {
+export default function Contact() {
     return (
         <>
             <Header />
             <StyledSection>
-                <h1>Equipment Catalog</h1>
+                <h1>Contact us!</h1>
+                <form>A contact form placeholder</form>
             </StyledSection>
             <Footer />
         </>

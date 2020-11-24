@@ -8,6 +8,7 @@ const StyledCategory = styled.section `
     height: 320px;
     background-color: ${(props) => props.theme.colors.background.primary};
     margin: 0 auto;
+    margin-bottom: 32px;
 
     display: flex;
     justify-content: center;
@@ -41,7 +42,7 @@ const StyledCategory = styled.section `
 
 export default function CategoryTile( {img, alt, text, url} ) {
     return (
-        <StyledCategory>
+        <StyledCategory id="services-section">
                 <Link href={url}>
                     <a>
                         <picture>

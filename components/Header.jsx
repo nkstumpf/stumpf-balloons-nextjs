@@ -87,6 +87,11 @@ const StyledNav = styled.nav `
     & li {
         border-bottom: solid black 1px;
         padding: 10px;
+
+        & input {
+          font-family: ${(props) => props.theme.fonts.heading};
+          font-size: ${(props) => props.theme.fonts.sizes.headingsm};
+        }
     }
 
     & li:last-child {

@@ -40,7 +40,7 @@ export default function Hero() {
                 <img src="/images/sb-bg-mobile.jpg" alt="Paul in homebuild balloon" width="100%" height="auto"/>
             </picture>
             <div>
-                <Button btnText='Place an Order!' btnStyle='light' />
+                <Button btnText='Place an Order!' btnUrl='/contact' btnStyle='light' />
             </div>
         </StyledHero>
     )
