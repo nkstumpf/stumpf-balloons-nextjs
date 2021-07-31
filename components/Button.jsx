@@ -20,7 +20,7 @@ const StyledButton = styled.button `
     }
 `
 
-export default function Button({ btnText, btnUrl, btnStyle }) {
+const Button = ({ btnText, btnUrl, btnStyle }) => {
     return (
         <Link href={btnUrl}>
             <StyledButton btnStyle={btnStyle}>
@@ -29,3 +29,5 @@ export default function Button({ btnText, btnUrl, btnStyle }) {
         </Link>
     )
 }
+
+export default Button;

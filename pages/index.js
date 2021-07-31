@@ -1,15 +1,15 @@
 import React from 'react';
 import Head from 'next/head';
 import styled from 'styled-components';
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import Banner from '../components/Banner';
-import CategoryTile from '../components/CategoryTile';
-import Footer from '../components/Footer';
+import Header from '@components/Header';
+import Footer from '@components/Footer';
+import Hero from '@components/Hero';
+import Banner from '@components/Banner';
+import CategoryTile from '@components/CategoryTile';
 
 const StyledHomePage = styled.main``;
 
-export default function HomePage() {
+const HomePage = () => {
 
   const headData = {
     title: 'Home',
@@ -46,16 +46,18 @@ export default function HomePage() {
         <meta property="og:description" content={headData.ogDescription} />
         <link rel="canonical" href={headData.canonicalUrl} />
       </Head>
-      <Header/>
+      <Header />
       <StyledHomePage id="maincontent">
-        <Hero/>
-        <Banner />
+        <Hero headerText="Welcome!" imgSrc="/images/sb-bg-mobile.jpg" imgAlt="Paul flying a home build balloon" />
+        <Banner btnText="Place an Order" btnUrl="/contact" />
         <CategoryTile img={images.repairstation} alt='photo of pauls repair station' text='Repair Station' url='/repair-station' />
         <CategoryTile img={images.catalog} alt='photo of pauls repair station' text='Equipment Catalog' url='/equipment-catalog' />
         <CategoryTile img={images.banners} alt='photo of pauls repair station' text='Banners' url='/banners' />
         <CategoryTile img={images.balloonbuilding} alt='photo of pauls repair station' text='Balloon Building' url='/balloon-building' />
-        <Footer />
       </StyledHomePage>
+      <Footer />
     </>
   )
 }
+
+export default HomePage;

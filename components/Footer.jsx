@@ -42,7 +42,7 @@ const StyledFooter = styled.nav `
     }
 `
 
-export default function Footer() {
+ const Footer = () => {
     return (
         <StyledFooter>
             <ul>
@@ -73,9 +73,10 @@ export default function Footer() {
                 <li>
                     <Facebook />
                     <a href="https://www.facebook.com/psstumpf">Follow Paul on Facebook</a>
-                    
                 </li>
             </ul>
         </StyledFooter>
     )
 }
+
+export default Footer;
