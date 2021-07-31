@@ -49,11 +49,13 @@ const HomePage = () => {
       <Header />
       <StyledHomePage id="maincontent">
         <Hero headerText="Welcome!" imgSrc="/images/sb-bg-mobile.jpg" imgAlt="Paul flying a home build balloon" />
-        <Banner btnText="Place an Order" btnUrl="/contact" />
-        <CategoryTile img={images.repairstation} alt='photo of pauls repair station' text='Repair Station' url='/repair-station' />
-        <CategoryTile img={images.catalog} alt='photo of pauls repair station' text='Equipment Catalog' url='/equipment-catalog' />
-        <CategoryTile img={images.banners} alt='photo of pauls repair station' text='Banners' url='/banners' />
-        <CategoryTile img={images.balloonbuilding} alt='photo of pauls repair station' text='Balloon Building' url='/balloon-building' />
+        <Banner btnText="Place an Order" btnUrl="/contact" snapLink="#start-here" />
+        <section id="start-here">
+          <CategoryTile img={images.repairstation} alt='photo of pauls repair station' text='Repair Station' url='/repair-station' />
+          <CategoryTile img={images.catalog} alt='photo of pauls repair station' text='Equipment Catalog' url='/equipment-catalog' />
+          <CategoryTile img={images.banners} alt='photo of pauls repair station' text='Banners' url='/banners' />
+          <CategoryTile img={images.balloonbuilding} alt='photo of pauls repair station' text='Balloon Building' url='/balloon-building' />
+        </section>
       </StyledHomePage>
       <Footer />
     </>

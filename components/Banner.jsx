@@ -43,11 +43,11 @@ const StyledBanner = styled.div `
         }
     }
 `
-const Banner = ({btnText, btnUrl}) => {
+const Banner = ({btnText, btnUrl, snapLink}) => {
     return (
         <StyledBanner>
         <Button btnText={btnText} btnUrl={btnUrl} btnStyle='light' />
-        <a href="#services-section"><ArrowDownCircle /></a>
+        <a href={snapLink}><ArrowDownCircle /></a>
         </StyledBanner>
     )
 }
