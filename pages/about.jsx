@@ -67,7 +67,7 @@ const About = () => {
             <Hero headerText="About" imgSrc="/images/sb-bg-mobile.jpg" imgAlt="Paul Stumpf" />
             <Banner btnText="Contact" btnUrl="/contact" snapLink="#about-paul" />
             <h1 id="about-paul">About Paul</h1>
-            <p>Paul S. Stumpf is the owner and operator of FAA Certified Hot Air Balloon Repair Station RG5R170N. (In other words... He's Legit.)</p>
+            <p>Paul S. Stumpf is the owner and operator of FAA Certified Hot Air Balloon Repair Station RG5R170N.</p>
             <img src="/images/paul.jpg" alt="Paul Stumpf" width="320px" height="auto" />
             <p>"Since 1980, I have specialized in the fabrication, repair and inspection of hot air balloons, as a full time occupation."</p>
             <h2>Early Years</h2>
@@ -80,7 +80,7 @@ const About = () => {
             <p>Want to learn more about the hot air balloon repair station? Check out more pictures and tons of info about balloon repair and maintenance on the <a href="/repair-station">Repair Station</a> page!</p>
             <h5>Ask the Repair Man</h5>
             <img src="/images/extra.jpg" alt="Paul working inside a cold air inflated balloon" width="320px" height="auto" />
-            <p>If you have a balloon maintenance question for Paul, you can submit e-mail queries for consideration. Paul will not be able to respond to all questions personally, but he will answer as many as possible. Questions and answers of a general interest will be posted on the <a href="/ask-the-repair-main">Ask the Repairman</a> page!</p>
+            <p>If you have a balloon maintenance question for Paul, you can submit e-mail queries for consideration. Paul will not be able to respond to all questions personally, but he will answer as many as possible. Questions and answers of a general interest will be posted on the <a href="/ask-the-repair-man">Ask the Repairman</a> page!</p>
             <div className="flexbox">
                 <Button btnText="Ask a Question!" btnUrl="/contact" btnStyle='dark'/>
             </div>
