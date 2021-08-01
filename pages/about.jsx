@@ -28,9 +28,9 @@ const StyledSection = styled.section `
 
         Button {
         margin-bottom: 16px;
+        }
     }
-    }
-`
+`;
 
 const About = () => {
 
@@ -75,7 +75,7 @@ const About = () => {
             <h3>Paul's Career</h3>
             <p>A twenty five year veteran of the balloon maintenance business, Paul has been a featured speaker at many of the largest ballooning safety seminars in the US.  Paul also authored the popular Balloon Life magazine column, "Repair Station" for many years.</p>
             <h4>Vermont Living</h4>
-            <img src="/images/sb-vermont-fall.jpeg" alt="Arial shot of the Vermont repair station in Fall" width="320px" height="auto" />
+            <img src="/images/sb-vermont-fall.jpg" alt="Arial shot of the Vermont repair station in Fall" width="320px" height="auto" />
             <p>Never one for traditional office spaces, in 1999 Paul moved his business from a boat building loft in Bristol, RI to an 1800's farmstead in Andover, VT. Paul operates his repair station out of the properties historic horse barn and can often be seen hoisting balloon baskets and the like into the second story renovated hay loft via a custom winch system that he purpose built upon purchasing the property.</p>
             <p>Want to learn more about the hot air balloon repair station? Check out more pictures and tons of info about balloon repair and maintenance on the <a href="/repair-station">Repair Station</a> page!</p>
             <h5>Ask the Repair Man</h5>

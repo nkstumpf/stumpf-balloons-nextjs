@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
-import { Camera, Facebook, Smile, Mail, User } from 'react-feather';
+import { Camera, Facebook, Smile, Mail, User, Tool } from 'react-feather';
 
 const StyledFooter = styled.nav `
     height: 320px;
@@ -62,6 +62,12 @@ const StyledFooter = styled.nav `
                     <Smile />
                     <Link href="/testimonials">
                         <a>Testimonials</a>
+                    </Link>
+                </li>
+                <li>
+                    <Tool />
+                    <Link href="/ask-the-repair-man">
+                        <a>FAQs</a>
                     </Link>
                 </li>
                 <li>

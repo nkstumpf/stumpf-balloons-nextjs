@@ -2,7 +2,6 @@
   "name": "stumpf-balloons-site",
   "version": "0.1.0",
   "private": true,
-
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,8 +9,8 @@
     "export": "next export",
     "clean": "rm -rf ./out && rm -rf ./.next"
   },
-
   "dependencies": {
+    "clsx": "^1.1.1",
     "next": "10.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

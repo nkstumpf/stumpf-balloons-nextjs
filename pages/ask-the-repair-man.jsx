@@ -74,7 +74,6 @@ const AskTheRepairMan = () => {
             <Banner btnText="Ask a Question!" btnUrl="/contact" snapLink="#faqs" />
             <section className="content" id="faqs">
                 <h1 id="about-paul">Ask the Repair Man | FAQs</h1>
-                <hr />
                 <nav>
                     <ul>
                         <a href="#question-1"><li><strong>Question #1:</strong> Raven/Aerostar Burner types.</li></a>
@@ -82,8 +81,6 @@ const AskTheRepairMan = () => {
                         <a href="#question-3"><li><strong>Question #3:</strong> Evaluating fabric condition of a used balloon in New Mexico.</li></a>
                     </ul>
                 </nav>
-                <p>Scroll down to find the questions in numerical order (click to expand)</p>
-                <hr />
                 <details id="question-1">
                     <summary><strong>Question:</strong> In casually checking out some Aerostar balloons for possible purchase, I am noticing a wide range in burners. I have come across HPII, HPIII, Zone Five, and even found a Square Shooter. When were the various burners used on Aerostar's and what are some considerations of the various burners?</summary>
                     <p><strong>Answer:</strong> A short history of Raven / Aerostar burners</p>

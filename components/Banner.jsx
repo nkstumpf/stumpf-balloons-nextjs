@@ -6,7 +6,6 @@ import { ArrowDownCircle } from 'react-feather';
 const StyledBanner = styled.div `
     position: relative;
     z-index: 25;
-    height: 119px;
     width: 100%;
     background-color: ${(props) => props.theme.colors.background.dark};
     display: flex;
