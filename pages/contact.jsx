@@ -19,6 +19,7 @@ export default function Contact() {
             <Header />
             <StyledSection>
                 <h1>Contact us!</h1>
+                <p>Test branch deploy</p>
                 <form>A contact form placeholder</form>
             </StyledSection>
             <Footer />
