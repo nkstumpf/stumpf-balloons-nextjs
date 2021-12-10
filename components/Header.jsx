@@ -24,7 +24,7 @@ const StyledHeader = styled.header`
 `
 
 const StyledTopBar = styled.div `
-  position: fixed;
+  /* position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -33,7 +33,7 @@ const StyledTopBar = styled.div `
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: white;
+  background-color: white; */
 
   .logo-container {
       width: 100%;
@@ -45,7 +45,7 @@ const StyledTopBar = styled.div `
   }
 
   .sb-icon {
-    width: auto; 
+    width: auto;
     height: 50px;
     margin: 0px;
   }
@@ -129,28 +129,28 @@ const StyledNav = styled.nav `
 export default class Header extends React.Component {
     constructor(props) {
       super(props);
-  
+
       this.state = {
         isOpen: false
       }
       this.mobileNav = React.createRef();
       this.handleOpenNav = this.handleOpenNav.bind(this);
     }
-  
+
     handleOpenNav = () => {
       this.setState({isOpen: true});
       const navbarStyles = this.mobileNav.current.style;
       navbarStyles.top = '80px';
 
     }
-  
+
     handleCloseNav = () => {
       this.setState({isOpen: false});
       this.mobileNav.current.style.top = '-230px';
     }
-    
+
     render() {
-  
+
       return (
         <>
           <StyledHeader>
@@ -162,7 +162,7 @@ export default class Header extends React.Component {
                   </Link>
                 </div>
                 <div className="menu-icon">
-                  {this.state.isOpen && 
+                  {this.state.isOpen &&
                   <X onClick={this.handleCloseNav} />
                   }
                   {!this.state.isOpen &&
