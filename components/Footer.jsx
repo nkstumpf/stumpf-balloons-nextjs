@@ -1,50 +1,48 @@
 import React from 'react';
 import Link from 'next/link';
-import styled from 'styled-components';
 import { Camera, Facebook, Smile, Mail, User, Tool } from 'react-feather';
 
-const StyledFooter = styled.nav `
-    height: 320px;
-    background-color: ${(props) => props.theme.colors.background.dark};
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+// nav styles
+    // height: 320px;
+    // background-color: ${(props) => props.theme.colors.background.dark};
+    // display: flex;
+    // justify-content: flex-start;
+    // align-items: center;
 
-    & ul {
-        list-style: none;
+    // & ul {
+    //     list-style: none;
 
-        & li {
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
+    //     & li {
+    //         margin-bottom: 10px;
+    //         display: flex;
+    //         justify-content: flex-start;
+    //         align-items: center;
 
-            & svg {
-                color: ${(props) => props.theme.colors.text.light};
-                margin-right: 10px;
-            }
-        }
+    //         & svg {
+    //             color: ${(props) => props.theme.colors.text.light};
+    //             margin-right: 10px;
+    //         }
+    //     }
 
-        & li:last-child {
-            margin-bottom: 0px;
-        }
-    }
+    //     & li:last-child {
+    //         margin-bottom: 0px;
+    //     }
+    // }
 
-    & a {
-        font-family: Arial;
-        font-size: ${(props) => props.theme.fonts.sizes.headingsm};
-        color: ${(props) => props.theme.colors.text.light};
-        text-decoration: none; 
-    }
+    // & a {
+    //     font-family: Arial;
+    //     font-size: ${(props) => props.theme.fonts.sizes.headingsm};
+    //     color: ${(props) => props.theme.colors.text.light};
+    //     text-decoration: none;
+    // }
 
-    & a:hover {
-        color: ${(props) => props.theme.colors.text.accent};
-    }
-`
+    // & a:hover {
+    //     color: ${(props) => props.theme.colors.text.accent};
+    // }
 
  const Footer = () => {
     return (
-        <StyledFooter>
+        <footer>
             <ul>
                 <li>
                     <User />
@@ -81,7 +79,7 @@ const StyledFooter = styled.nav `
                     <a href="https://www.facebook.com/psstumpf">Follow Paul on Facebook</a>
                 </li>
             </ul>
-        </StyledFooter>
+        </footer>
     )
 }
 

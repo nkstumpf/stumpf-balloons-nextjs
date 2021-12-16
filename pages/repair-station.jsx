@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import Head from 'next/head';
 import Hero from '@components/Hero';
 import Banner from '@components/Banner';
@@ -9,54 +8,53 @@ import Header from '@components/Header';
 import Footer from '@components/Footer';
 import { ChevronLeft, ChevronRight } from 'react-feather';
 
-const StyledSection = styled.section `
-    
-    & h1, h2, h3, h4, h5 {
-        text-align: center;
-        font-family: ${(props) => props.theme.fonts.heading};
-        font-size: ${(props) => props.theme.fonts.sizes.heading};
-    }
+// section styles
 
-    & p, a {
-        margin: 16px;
-        font-family: ${(props) => props.theme.fonts.body};
-        line-height: ${(props) => props.theme.fonts.sizes.headingsm};
-    }
+    // & h1, h2, h3, h4, h5 {
+    //     text-align: center;
+    //     font-family: ${(props) => props.theme.fonts.heading};
+    //     font-size: ${(props) => props.theme.fonts.sizes.heading};
+    // }
 
-    .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        margin-top: -22px;
-        padding: 16px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-    }
+    // & p, a {
+    //     margin: 16px;
+    //     font-family: ${(props) => props.theme.fonts.body};
+    //     line-height: ${(props) => props.theme.fonts.sizes.headingsm};
+    // }
 
-    .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
+    // .prev, .next {
+    //     cursor: pointer;
+    //     position: absolute;
+    //     top: 50%;
+    //     width: auto;
+    //     margin-top: -22px;
+    //     padding: 16px;
+    //     color: white;
+    //     font-weight: bold;
+    //     font-size: 18px;
+    //     transition: 0.6s ease;
+    //     border-radius: 0 3px 3px 0;
+    //     user-select: none;
+    // }
 
-    .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
-    }
+    // .next {
+    //     right: 0;
+    //     border-radius: 3px 0 0 3px;
+    // }
 
-    .flexbox {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    // .prev:hover, .next:hover {
+    //     background-color: rgba(0,0,0,0.8);
+    // }
 
-    .icons {
-        margin: 16px 0px 16px 0px;
-    }
-`;
+    // .flexbox {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    // }
+
+    // .icons {
+    //     margin: 16px 0px 16px 0px;
+    // }
 
 const RepairStation = () => {
 
@@ -147,7 +145,7 @@ const RepairStation = () => {
                 <link rel="canonical" href={headData.canonicalUrl} />
             </Head>
             <Header />
-            <StyledSection>
+            <section>
                 <Hero headerText="Repair Station" imgSrc="/images/sb-bg-mobile.jpg" imgAlt="Paul Stumpf" />
                 <Banner btnText="Virtual Tour" btnUrl="#tour" snapLink="#tour" />
                 <h2>FAA Certified Hot Air Balloon Repair Station RG5R170N</h2>
@@ -196,7 +194,7 @@ const RepairStation = () => {
                         <ChevronRight className="icon" onClick={() => changeCard(activeCard + 1)} />
                     </div>
                 </section>
-            </StyledSection>
+            </section>
             <Footer />
         </>
     )

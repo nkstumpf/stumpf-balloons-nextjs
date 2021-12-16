@@ -1,25 +1,23 @@
 import React from 'react';
-import styled from 'styled-components';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 
-const StyledSection = styled.section `
-    height: 375px;
-    text-align: center;
+// section styles
+    // height: 375px;
+    // text-align: center;
 
-    & h1 {
-        position: relative;
-        top: 80px;
-    }
-`
+    // & h1 {
+    //     position: relative;
+    //     top: 80px;
+    // }
 
 export default function EquipmentCatalog() {
     return (
         <>
             <Header />
-            <StyledSection>
+            <section>
                 <h1>Equipment Catalog</h1>
-            </StyledSection>
+            </section>
             <Footer />
         </>
     )
@@ -50,7 +48,7 @@ export default function EquipmentCatalog() {
         }
     },
     attachmentAdapters: {
-        
+
     }
 }
 
@@ -62,5 +60,5 @@ export productData;
 
 
 // export default function EquipmentCatalog(name, desc, price, imgUrl) {
-// <Product name={name} desc={desc} price={price} imgUrl={imgUrl} color={producrts.colors.default}/> 
-// <Product name={name} desc={desc} price={price} imgUrl={imgUrl} color={producrts.colors}/> 
+// <Product name={name} desc={desc} price={price} imgUrl={imgUrl} color={producrts.colors.default}/>
+// <Product name={name} desc={desc} price={price} imgUrl={imgUrl} color={producrts.colors}/>

@@ -1,36 +1,34 @@
 import React from 'react';
 import Head from 'next/head';
-import styled from 'styled-components';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Hero from '@components/Hero';
 import Banner from '@components/Banner';
 import Button from '@components/Button';
 
-const StyledSection = styled.section `
+// section styles
 
-    & h1, h2, h3, h4, h5 {
-        text-align: center;
-        font-family: ${(props) => props.theme.fonts.heading};
-        font-size: ${(props) => props.theme.fonts.sizes.heading};
-    }
+    // & h1, h2, h3, h4, h5 {
+    //     text-align: center;
+    //     font-family: ${(props) => props.theme.fonts.heading};
+    //     font-size: ${(props) => props.theme.fonts.sizes.heading};
+    // }
 
-    & p {
-        text-align: left;
-        margin: 16px;
-        font-family: ${(props) => props.theme.fonts.body};
-        line-height: ${(props) => props.theme.fonts.sizes.headingsm};
-    }
+    // & p {
+    //     text-align: left;
+    //     margin: 16px;
+    //     font-family: ${(props) => props.theme.fonts.body};
+    //     line-height: ${(props) => props.theme.fonts.sizes.headingsm};
+    // }
 
-    .flexbox {
-        display: flex;
-        justify-content: center;
+    // .flexbox {
+    //     display: flex;
+    //     justify-content: center;
 
-        Button {
-        margin-bottom: 16px;
-        }
-    }
-`;
+    //     Button {
+    //     margin-bottom: 16px;
+    //     }
+    // }
 
 const About = () => {
 
@@ -63,7 +61,7 @@ const About = () => {
                 <link rel="canonical" href={headData.canonicalUrl} />
             </Head>
             <Header />
-            <StyledSection>
+            <section>
             <Hero headerText="About" imgSrc="/images/sb-bg-mobile.jpg" imgAlt="Paul Stumpf" />
             <Banner btnText="Contact" btnUrl="/contact" snapLink="#about-paul" />
             <h1 id="about-paul">About Paul</h1>
@@ -84,7 +82,7 @@ const About = () => {
             <div className="flexbox">
                 <Button btnText="Ask a Question!" btnUrl="/contact" btnStyle='dark'/>
             </div>
-            </StyledSection>
+            </section>
             <Footer />
         </>
     )

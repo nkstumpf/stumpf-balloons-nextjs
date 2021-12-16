@@ -1,176 +1,174 @@
 import React from 'react';
 import Link from 'next/link';
-import styled from 'styled-components';
 import { Menu, X, Search } from 'react-feather';
 
-const StyledHeader = styled.header`
+// header styles
 
-  width: 100%;
-  text-align: center;
+//   width: 100%;
+//   text-align: center;
 
-  a {
-      text-decoration: none;
-  }
+//   a {
+//       text-decoration: none;
+//   }
 
-  ul, ol {
-      list-style: none;
-  }
+//   ul, ol {
+//       list-style: none;
+//   }
 
-  .flex {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-`
+//   .flex {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//   }
+// `
 
-const StyledTopBar = styled.div `
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  z-index: 40;
-  height: 80px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: white;
+// div styles
+//   position: fixed;
+//   top: 0px;
+//   left: 0px;
+//   width: 100%;
+//   z-index: 40;
+//   height: 80px;
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: center;
+//   background-color: white;
 
-  .logo-container {
-      width: 100%;
-  }
+//   .logo-container {
+//       width: 100%;
+//   }
 
-  .logo {
-    font-family: ${(props) => props.theme.fonts.logo};
-    font-size: ${(props) => props.theme.fonts.sizes.headinglg};
-  }
+//   .logo {
+//     font-family: ${(props) => props.theme.fonts.logo};
+//     font-size: ${(props) => props.theme.fonts.sizes.headinglg};
+//   }
 
-  .sb-icon {
-    width: auto; 
-    height: 50px;
-    margin: 0px;
-  }
+//   .sb-icon {
+//     width: auto;
+//     height: 50px;
+//     margin: 0px;
+//   }
 
-  .menu-icon {
-    margin: 20px;
-  }
-`
+//   .menu-icon {
+//     margin: 20px;
+//   }
 
-const StyledNav = styled.nav `
-  z-index: 30;
-  position: fixed;
-  overflow: hidden;
-  top: -230px;
-  left: 0px;
-  background-color: white;
-  width: 100%;
-  margin: 0;
-  transition: top 1s;
+// nav styles
 
-  & ul {
-    width: 100%;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column; // change to row for desktop view
-    margin: 0;
+  // z-index: 30;
+  // position: fixed;
+  // overflow: hidden;
+  // top: -230px;
+  // left: 0px;
+  // background-color: white;
+  // width: 100%;
+  // margin: 0;
+  // transition: top 1s;
 
-    & a {
-        color: black;
-        font-family: ${(props) => props.theme.fonts.heading};
-        font-size: ${(props) => props.theme.fonts.sizes.headingsm};
-    }
+  // & ul {
+  //   width: 100%;
+  //   padding: 0;
+  //   display: flex;
+  //   justify-content: space-around;
+  //   flex-direction: column; // change to row for desktop view
+  //   margin: 0;
 
-    & a:hover {
-        color: white;
-    }
+  //   & a {
+  //       color: black;
+  //       font-family: ${(props) => props.theme.fonts.heading};
+  //       font-size: ${(props) => props.theme.fonts.sizes.headingsm};
+  //   }
 
-    & li {
-        border-bottom: solid black 1px;
-        padding: 10px;
+  //   & a:hover {
+  //       color: white;
+  //   }
 
-        & input {
-          font-family: ${(props) => props.theme.fonts.heading};
-          font-size: ${(props) => props.theme.fonts.sizes.headingsm};
-        }
-    }
+  //   & li {
+  //       border-bottom: solid black 1px;
+  //       padding: 10px;
 
-    & li:last-child {
-        border-bottom: none;
-    }
+  //       & input {
+  //         font-family: ${(props) => props.theme.fonts.heading};
+  //         font-size: ${(props) => props.theme.fonts.sizes.headingsm};
+  //       }
+  //   }
 
-    & li:hover {
-        background-color: black;
-        cursor: pointer;
+  //   & li:last-child {
+  //       border-bottom: none;
+  //   }
 
-        & a {
-            color: white;
-        }
+  //   & li:hover {
+  //       background-color: black;
+  //       cursor: pointer;
 
-        & .searchbar-icon {
-            color: white;
-        }
-    }
+  //       & a {
+  //           color: white;
+  //       }
 
-    .searchbar-icon {
-      margin-right: 10px;
-    }
+  //       & .searchbar-icon {
+  //           color: white;
+  //       }
+  //   }
 
-    .searchbar-input {
-      width: 100%;
-      padding: 5px 5px 5px 10px;
-      text-align: left;
-      box-shadow: none;
-      border: solid black 1px;
-      border-radius: 10px;
-    }
-  }
-`
+  //   .searchbar-icon {
+  //     margin-right: 10px;
+  //   }
+
+  //   .searchbar-input {
+  //     width: 100%;
+  //     padding: 5px 5px 5px 10px;
+  //     text-align: left;
+  //     box-shadow: none;
+  //     border: solid black 1px;
+  //     border-radius: 10px;
+  //   }
+  // }
 
 export default class Header extends React.Component {
     constructor(props) {
       super(props);
-  
+
       this.state = {
         isOpen: false
       }
       this.mobileNav = React.createRef();
       this.handleOpenNav = this.handleOpenNav.bind(this);
     }
-  
+
     handleOpenNav = () => {
       this.setState({isOpen: true});
       const navbarStyles = this.mobileNav.current.style;
       navbarStyles.top = '80px';
 
     }
-  
+
     handleCloseNav = () => {
       this.setState({isOpen: false});
       this.mobileNav.current.style.top = '-230px';
     }
-    
+
     render() {
-  
+
       return (
         <>
-          <StyledHeader>
-            <StyledTopBar>
-                <div className="logo-container flex">
-                  <h1 className="logo">Stumpf Balloons</h1>
+          <header>
+            <div>
+                <div className="flex">
+                  <h1 className="">Stumpf Balloons</h1>
                   <Link href="./">
                     <img className="sb-icon" src='/images/sb-balloon-icon.png' alt="Balloon Icon"/>
                   </Link>
                 </div>
                 <div className="menu-icon">
-                  {this.state.isOpen && 
+                  {this.state.isOpen &&
                   <X onClick={this.handleCloseNav} />
                   }
                   {!this.state.isOpen &&
                   <Menu onClick={this.handleOpenNav} />
                   }
                 </div>
-            </StyledTopBar>
-            <StyledNav ref={this.mobileNav}>
+            </div>
+            <nav ref={this.mobileNav}>
               <ul>
                 <li>
                   <div className="searchbar flex">
@@ -199,8 +197,8 @@ export default class Header extends React.Component {
                   </Link>
                 </li>
               </ul>
-            </StyledNav>
-          </StyledHeader>
+            </nav>
+          </header>
         </>
       )
     }
