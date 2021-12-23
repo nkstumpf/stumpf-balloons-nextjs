@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
-import Button from '../components/Button';
+import Button from '@components/Button';
 
 const StyledHero = styled.section `
 
@@ -28,20 +28,34 @@ const StyledHero = styled.section `
         left: 0;
         z-index: 20;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        h1 {
+            text-align: center;
+            padding: 5px;
+            width: 100%;
+            background-color: ${(props) => props.theme.colors.background.transparentaccent};
+            font-family: ${(props) => props.theme.fonts.logo};
+        }
     }
 `
 
-export default function Hero() {
+const Hero = ({imgSrc, imgAlt, headerText, withBtn, btnText, btnUrl}) => {
     return (
         <StyledHero>
             <picture className='hero__bg'>
-                <img src="/images/sb-bg-mobile.jpg" alt="Paul in homebuild balloon" width="100%" height="auto"/>
+                <img src={imgSrc} alt={imgAlt} width="100%" height="auto"/>
             </picture>
             <div>
-                <Button btnText='Place an Order!' btnUrl='/contact' btnStyle='light' />
+                <h1>{headerText}</h1>
+                {withBtn && (
+                    <Button btnText={btnText} btnUrl={btnUrl} btnStyle='light' />
+                )}
             </div>
         </StyledHero>
     )
 }
+
+export default Hero;

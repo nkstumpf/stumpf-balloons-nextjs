@@ -40,7 +40,7 @@ const StyledCategory = styled.section `
     }
 `
 
-export default function CategoryTile( {img, alt, text, url} ) {
+const CategoryTile = ( {img, alt, text, url} ) => {
     return (
         <StyledCategory id="services-section">
                 <Link href={url}>
@@ -54,3 +54,5 @@ export default function CategoryTile( {img, alt, text, url} ) {
         </StyledCategory>
     )
 }
+
+export default CategoryTile;
