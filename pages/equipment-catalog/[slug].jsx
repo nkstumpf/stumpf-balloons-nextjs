@@ -3,6 +3,7 @@ import Storyblok from '@/lib/storyblok';
 
 const ProductPage = ({ story }) => {
   const { content } = story;
+  // console.log(content.available_colors);
 
   return (
     <div>
@@ -11,6 +12,14 @@ const ProductPage = ({ story }) => {
       <p>{content.description}</p>
       <p>{content.shipping_weight}</p>
       <p>{content.sku}</p>
+      <h2>Available Colors:</h2>
+      <ul>
+      {content.available_colors && (
+        content.available_colors.map(color => (
+        <li>{color}</li>
+        )
+        ))}
+      </ul>
       <img src={content.images[0].filename} alt={content.name} />
     </div>
   );
