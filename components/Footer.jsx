@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
-import { Camera, Facebook, Smile, Mail, User } from 'react-feather';
+import { Camera, Facebook, Smile, Mail, User, Tool } from 'react-feather';
 
 const StyledFooter = styled.nav `
     height: 320px;
@@ -42,7 +42,7 @@ const StyledFooter = styled.nav `
     }
 `
 
-export default function Footer() {
+ const Footer = () => {
     return (
         <StyledFooter>
             <ul>
@@ -65,6 +65,12 @@ export default function Footer() {
                     </Link>
                 </li>
                 <li>
+                    <Tool />
+                    <Link href="/ask-the-repair-man">
+                        <a>FAQs</a>
+                    </Link>
+                </li>
+                <li>
                     <Camera />
                     <Link href="/photo-blog">
                         <a>Paul's Photography</a>
@@ -73,9 +79,10 @@ export default function Footer() {
                 <li>
                     <Facebook />
                     <a href="https://www.facebook.com/psstumpf">Follow Paul on Facebook</a>
-                    
                 </li>
             </ul>
         </StyledFooter>
     )
 }
+
+export default Footer;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '@components/Header';
+import Footer from '@components/Footer';
 
 const StyledSection = styled.section `
     height: 375px;
@@ -19,6 +19,7 @@ export default function Contact() {
             <Header />
             <StyledSection>
                 <h1>Contact us!</h1>
+                <p>Test branch deploy</p>
                 <form>A contact form placeholder</form>
             </StyledSection>
             <Footer />

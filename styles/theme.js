@@ -14,6 +14,7 @@ const theme = {
             dark: '#191919',
             transparentdark: 'rgba(0, 0, 0, 0.7)',
             accent: '#b455be',
+            transparentaccent: 'rgba(180, 85, 190, 0.75)',
             purewhite: '#FFFFFF',
             pureblack: '#000000',
         },
