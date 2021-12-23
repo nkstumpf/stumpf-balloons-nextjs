@@ -1,42 +1,37 @@
 import React from 'react';
 import Head from 'next/head';
-import styled from 'styled-components';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Hero from '@components/Hero';
 import Banner from '@components/Banner';
 import Button from '@components/Button';
 
-const StyledSection = styled.section `
+// section styles
 
+    // & h1, h2, h3, h4, h5 {
+    //     text-align: center;
+    //     font-family: ${(props) => props.theme.fonts.heading};
+    //     font-size: ${(props) => props.theme.fonts.sizes.heading};
+    // }
 
+    // & p, summary, li {
+    //     text-align: left;
+    //     margin: 16px;
+    //     font-family: ${(props) => props.theme.fonts.body};
+    //     line-height: ${(props) => props.theme.fonts.sizes.headingsm};
+    // }
 
-    & h1, h2, h3, h4, h5 {
-        text-align: center;
-        font-family: ${(props) => props.theme.fonts.heading};
-        font-size: ${(props) => props.theme.fonts.sizes.heading};
-    }
+    // & details {
+    //     margin: 0px 16px 0px 16px;
+    // }
 
-    & p, summary, li {
-        text-align: left;
-        margin: 16px;
-        font-family: ${(props) => props.theme.fonts.body};
-        line-height: ${(props) => props.theme.fonts.sizes.headingsm};
-    }
+    // .flexbox {
+    //     display: flex;
+    //     justify-content: center;
 
-    & details {
-        margin: 0px 16px 0px 16px;
-    }
-
-    .flexbox {
-        display: flex;
-        justify-content: center;
-
-        Button {
-        margin-bottom: 16px;
-    }
-
-}`
+    //     Button {
+    //     margin-bottom: 16px;
+    // }
 
 const AskTheRepairMan = () => {
 
@@ -69,7 +64,7 @@ const AskTheRepairMan = () => {
                 <link rel="canonical" href={headData.canonicalUrl} />
             </Head>
             <Header />
-            <StyledSection>
+            <section>
             <Hero headerText="Ask the Repair Man!" imgSrc="/images/sb-bg-mobile.jpg" imgAlt="Paul Stumpf" />
             <Banner btnText="Ask a Question!" btnUrl="/contact" snapLink="#faqs" />
             <section className="content" id="faqs">
@@ -102,8 +97,8 @@ const AskTheRepairMan = () => {
                     <p><strong>Answer:</strong> Most manufacturers have had some problems with fabric. I wouldn't buy any balloon you are looking at, without a porosity test. Even though the manufacturer doesn't "officially" require one, it's a simple matter to take it to a repair station that has an Aerostar porosity tester, and have them evaluate it. The balloon would be much more enticing if it has some extended-life fabric (like Duraflight or Hyperlast) in the top. The more the better. Overtemping on an occasional basis is not necessarily a big concern. However, I would like to know the history of the balloon to see if overtemping has been a chronic occurrence. I would recommend talking to the Repair Station(s) that  maintained and annualled the system. One other item of concern is color fading from UV exposure. Some British fabrics have had  serious problems with dye fading. Especially the red, orange, purple, pink and burgundy colors. In Albuquerque, this could be a serious concern due to high UV exposure. Not only is it aesthetically displeasing, but It can be accompanied by overall fabric degradation.</p>
                 </details>
             </section>
-            
-            </StyledSection>
+
+            </section>
             <Footer />
         </>
     )
