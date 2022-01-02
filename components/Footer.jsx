@@ -8,17 +8,17 @@ const footerStyles = [
     'flex',
     'flex-col',
     'items-center',
-    'bg-white',
 ];
 
 const divStyles = [
     'w-full',
     'max-w-screen-xl',
     'p-4',
-    'bg-white',
-    'text-black',
+    'text-white',
     'text-baseLg',
     'font-header',
+    'bg-black',
+    'rounded-t-lg',
 ];
 
  const Footer = () => {
@@ -26,29 +26,29 @@ const divStyles = [
         <footer className={clsx(footerStyles)}>
             <div className={clsx(divStyles)}>
                 <ul className="">
-                    <li className="flex items-center mb-4">
+                    <li className="flex items-center mb-4 hover:text-teal">
                         <Facebook className="mr-4" />
                         <a href="https://www.facebook.com/psstumpf">Follow Paul on Facebook</a>
                     </li>
-                    <li className="flex items-center mb-4">
+                    <li className="flex items-center mb-4 hover:text-teal">
                         <User className="mr-4" />
                         <Link href="/about">
                             <a>About Paul</a>
                         </Link>
                     </li>
-                    <li className="flex items-center mb-4">
+                    <li className="flex items-center mb-4 hover:text-teal">
                         <Mail className="mr-4" />
                         <Link href="/contact">
                             <a>Contact Info</a>
                         </Link>
                     </li>
-                    <li className="flex items-center mb-4">
+                    <li className="flex items-center mb-4 hover:text-teal">
                         <Camera className="mr-4" />
                         <Link href="/photo-blog">
                             <a>Paul's Photography</a>
                         </Link>
                     </li>
-                    <li className="flex items-center">
+                    <li className="flex items-center hover:text-teal">
                         <p className="mr-4">&copy;</p>
                         <p>Stumpf Balloons & Banners {new Date().getFullYear()}</p>
                     </li>

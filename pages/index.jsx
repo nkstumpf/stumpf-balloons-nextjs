@@ -49,10 +49,10 @@ const HomePage = () => {
         imgSrc="/images/sb-bg-mobile.jpg"
         imgAlt="Paul flying a home build balloon"
         withBtn
-        btnText="Place an Order"
-        btnUrl="/contact"
+        btnText="Start Here"
+        btnUrl="#start-here"
       />
-      <section className="mx-auto max-w-screen-xl mb-8 p-4 text-black text-base">
+      <section id="start-here" className="mx-auto max-w-screen-xl mb-8 p-4 xl:px-0 text-black text-base">
         <h2 className="text-baseLg mb-4">Welcome to the Stumpf Balloons web site and online catalog!</h2>
         <p className="mb-4">Stumpf Balloons offers an extensive assortment of products for Hot Air Balloonists, and one of the most comprehensive selections of hot air ballooning equipment and services available anywhere in the world. Even if you're not a balloonist, you will still see many unique and hard-to-find items throughout our site.</p>
         <p className="mb-4">As always, I offer friendly professional advice from a real live person, M-F 9-5 Eastern time.</p>

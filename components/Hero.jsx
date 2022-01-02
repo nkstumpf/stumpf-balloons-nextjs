@@ -6,9 +6,10 @@ import clsx from 'clsx';
 const containerStyles = [
     'mx-auto',
     'max-w-screen-xl',
-    'sm:max-h-[600px]',
+    'max-h-[600px]',
     'overflow-hidden',
-    'mb-8'
+    'mb-8',
+    'sm:rounded-lg',
 ];
 
 const divStyles = [
@@ -24,7 +25,7 @@ const divStyles = [
     'flex-col',
     'justify-center',
     'items-center',
-    'sm:max-h-[600px]',
+    'max-h-[600px]',
 ];
 
 const headerStyles = [
