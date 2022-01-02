@@ -1,6 +1,4 @@
 const colors = require('tailwindcss/colors')
-// plugins
-// const typography = require('./tailwindPlugins/typography');
 
 module.exports = {
   mode: 'jit',
@@ -14,7 +12,6 @@ module.exports = {
     extend: {},
 
     screens: {
-      xxs: '240px',
       xs: '320px',
       sm: '480px',
       md: '760px',
@@ -24,20 +21,28 @@ module.exports = {
     },
 
     colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      black: colors.black,
-      white: colors.white,
-      gray: colors.gray,
-      emerald: colors.emerald,
-      indigo: colors.indigo,
-      yellow: colors.yellow,
+      black: '#171717',
+      white: '#fafafa',
+      grey: '#94a3b5',
+      teal: '#2DD4BF',
+      red: '#EF4444',
+      indigo: '#818CF8',
+
     },
 
     fontFamily: {
-      header: ['Montserrat', 'Helvetica', 'Arial', 'sans-serif'],
+      header: ['Nunito', 'Helvetica', 'Arial', 'sans-serif'],
       sans: ['proxima-nova', 'Arial', 'sans-serif']
     },
+
+    fontSize: {
+      base: ['1rem', '1.75rem'], // 16px x 28px
+      baseLg: ['1.375rem', '2.125rem'], // 22px x 34px
+
+      headerSm: ['1.5rem', '2.25rem'], // 20px x 32px
+      header: ['1.75rem', '2.5rem'], // 24px x 36px
+      headerLg: ['2rem', '3rem'], // 28px x 48px
+    }
   },
   plugins: [],
 }

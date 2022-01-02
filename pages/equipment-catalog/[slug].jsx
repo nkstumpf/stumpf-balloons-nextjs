@@ -5,22 +5,23 @@ const ProductPage = ({ story }) => {
   const { content } = story;
   // console.log(content.available_colors);
 
+  const colorNames = content.available_colors = content.available_colors.map(color => {
+    return color
+  });
+
   return (
     <div>
-      <h1>{content.name}</h1>
-      <p>{content.price}</p>
+      <h1 className="text-emerald">{content.name}</h1>
+      <p>${content.price}</p>
       <p>{content.description}</p>
-      <p>{content.shipping_weight}</p>
-      <p>{content.sku}</p>
       <h2>Available Colors:</h2>
-      <ul>
-      {content.available_colors && (
-        content.available_colors.map(color => (
-        <li>{color}</li>
-        )
-        ))}
-      </ul>
+      {colorNames.map(color => {
+        return <p>{color}</p>;
+      })}
+      <p>{content.color_details}</p>
       <img src={content.images[0].filename} alt={content.name} />
+      <p>{content.size}</p>
+      <p>{content.additional_options}</p>
     </div>
   );
 }

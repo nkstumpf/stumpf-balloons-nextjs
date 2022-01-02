@@ -2,8 +2,9 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* @import "./partials/fonts.css";
-@import "./partials/base.css";
+@import "./partials/fonts.css";
+
+/* @import "./partials/base.css";
 @import "./partials/typography.css"; */
 
 @import 'partials/carousel-card';
