@@ -5,26 +5,6 @@ import Footer from '@components/Footer';
 import Hero from '@components/Hero';
 import Banner from '@components/Banner';
 import CategoryTile from '@components/CategoryTile';
-import Button from '@components/Button';
-
-// main styles
-    // & h1, h2, h3, h4, h5 {
-    //   text-align: center;
-    //   font-family: ${(props) => props.theme.fonts.heading};
-    //   font-size: ${(props) => props.theme.fonts.sizes.heading};
-    // }
-
-    // & p {
-    //   text-align: left;
-    //   margin: 16px;
-    //   font-family: ${(props) => props.theme.fonts.body};
-    //   line-height: ${(props) => props.theme.fonts.sizes.headingsm};
-    // }
-
-    // .flexbox {
-    //   display: flex;
-    //   justify-content: center;
-    // }
 
 const HomePage = () => {
 
@@ -63,22 +43,24 @@ const HomePage = () => {
         <meta property="og:description" content={headData.ogDescription} />
         <link rel="canonical" href={headData.canonicalUrl} />
       </Head>
-      <Header />
-      <main id="maincontent">
-        <Hero headerText="Welcome!" imgSrc="/images/sb-bg-mobile.jpg" imgAlt="Paul flying a home build balloon" />
-        <Banner btnText="Place an Order" btnUrl="/contact" snapLink="#start-here" />
-        <section id="start-here">
-          <h2 className="">Welcome to the Stumpf Balloons web site and online catalog!</h2>
-          <p>Stumpf Balloons offers an extensive assortment of products for Hot Air Balloonists, and one of the most comprehensive selections of hot air ballooning equipment and services available anywhere in the world. Even if you're not a balloonist, you will still see many unique and hard-to-find items throughout our site.</p>
-          <p>As always, I offer friendly professional advice from a real live person, M-F 9-5 Eastern time.</p>
-          <div className="flexbox">
-            <Button className="contact-btn" btnText="Contact Us!" btnUrl="/contact" btnStyle="dark" />
-          </div>
+      <main id="maincontent" className="bg-white">
+        <Header />
+        <Hero
+          headerText="Welcome to Stumpf Balloons & Banners"
+          imgSrc="/images/sb-bg-mobile.jpg"
+          imgAlt="Paul flying a home build balloon"
+          withBtn
+          btnText="Place an Order"
+          btnUrl="/contact"
+        />
+        <section className="mx-auto max-w-screen-xl mb-8 p-8 text-black text-base">
+          <h2 className="text-baseLg mb-4">Welcome to the Stumpf Balloons web site and online catalog!</h2>
+          <p className="mb-4">Stumpf Balloons offers an extensive assortment of products for Hot Air Balloonists, and one of the most comprehensive selections of hot air ballooning equipment and services available anywhere in the world. Even if you're not a balloonist, you will still see many unique and hard-to-find items throughout our site.</p>
+          <p className="mb-4">As always, I offer friendly professional advice from a real live person, M-F 9-5 Eastern time.</p>
           <p>Happy surfing! Paul S. Stumpf - Owner.</p>
         </section>
-        <section>
+        <section className="mx-auto max-w-screen-xl mb-8 flex flex-col sm:flex-row items-center sm:justify-between">
           <CategoryTile img={images.repairstation} alt='photo of pauls repair station' text='Repair Station' url='/repair-station' />
-          <CategoryTile img={images.catalog} alt='photo of pauls repair station' text='Equipment Catalog' url='/equipment-catalog' />
           <CategoryTile img={images.banners} alt='photo of pauls repair station' text='Banners' url='/banners' />
           <CategoryTile img={images.balloonbuilding} alt='photo of pauls repair station' text='Balloon Building' url='/balloon-building' />
         </section>

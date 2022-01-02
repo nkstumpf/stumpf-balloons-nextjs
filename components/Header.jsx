@@ -2,45 +2,47 @@ import React from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'react-feather';
 import clsx from 'clsx';
+// import SBLogo from '../public/images/sb-logo.svg';
 
 const headerStyles = [
-  'w-100',
-  'text-center'
+  'bg-white',
+  'h-20',
+  'w-full',
+  'flex',
+  'flex-col',
+  'items-center',
+  'fixed',
+  'overflow-hidden',
+  'z-50',
 ];
 
-
 const divStyles = [
+  'w-full',
+  'max-w-screen-xl',
   'flex',
-  'fixed',
-  'top-0',
-  'left-0',
-  'w-100',
-  'z-50',
-  'h-[80px]',
-  'content-start',
+  'justify-between',
   'items-center',
+  'h-20',
   'bg-white',
+  'p-4',
+  // 'sm:p-4',
 ];
 
 const navStyles = [
   'z-30',
-  'fixed',
-  'overflow-hidden',
-  'left-0',
   'bg-white',
   'w-full',
+  'max-w-screen-xl',
   'm-0',
 ];
 
 const listStyles = [
-  'w-100',
-  'p-0',
   'flex',
-  'justify-around',
   'flex-col', // change to 'flex-row' for desktop view
+  'text-center',
+  'bg-white',
   'm-0',
-  'list-none',
-  'bg-white'
+  'p-0',
 ];
 
 export default class Header extends React.Component {
@@ -66,10 +68,11 @@ export default class Header extends React.Component {
 
       return (
         <>
-          <header className={clsx(headerStyles)}>
-            <div className={clsx(divStyles, 'flex content-center items-center')}>
+          <header className={clsx(headerStyles, this.state.isOpen ? 'h-[251px]' : 'h-20')}>
+            <div className={clsx(divStyles)}>
               <div>
                 <h1 className="text-black font-header text-headerLg">Stumpf Balloons</h1>
+                {/* <SBLogo /> */}
               </div>
               <div className="m-[20px] cursor-pointer">
                 {this.state.isOpen &&
@@ -80,19 +83,19 @@ export default class Header extends React.Component {
                 }
               </div>
             </div>
-            <nav className={clsx(navStyles, this.state.isOpen ? 'top-[80px]' : 'top-[-230px]')} ref={this.mobileNav}>
+            <nav className={clsx(navStyles)} ref={this.mobileNav}>
               <ul className={clsx(listStyles)}>
-                <li className="border-black border-b p-1 bg-white">
+                <li className="border-black border-b p-1 bg-white sm:border-none">
                   <Link href="/repair-station">
                     <a className="no-underline hover:text-teal text-black text-baseLg font-header">Repair Station</a>
                   </Link>
                 </li>
-                <li className="border-black border-b p-1 bg-white">
+                <li className="border-black border-b p-1 bg-white sm:border-none">
                   <Link href="/equipment-catalog">
                     <a className="no-underline hover:text-teal text-black text-baseLg font-header">Equipment Catalog</a>
                   </Link>
                 </li>
-                <li className="border-black border-b p-1 bg-white">
+                <li className="border-black border-b p-1 bg-white sm:border-none">
                   <Link href="/banners">
                     <a className="no-underline hover:text-teal text-black text-baseLg font-header">Banners</a>
                   </Link>

@@ -39,13 +39,13 @@ import Link from 'next/link';
 
 const CategoryTile = ( {img, alt, text, url} ) => {
     return (
-        <div id="services-section">
+        <div className="w-80 h-80 overflow-hidden" id="services-section">
                 <Link href={url}>
                     <a>
                         <picture>
-                            <img src={img} alt={alt} />
+                            <img src={img} alt={alt} width="auto" height="248px"/>
                         </picture>
-                        <h1>{text}</h1>
+                        <h1 className="text-center">{text}</h1>
                     </a>
                 </Link>
         </div>
