@@ -1,0 +1,1 @@
+// props - single image + text

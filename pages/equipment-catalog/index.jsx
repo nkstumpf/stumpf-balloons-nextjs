@@ -1,49 +1,73 @@
 import React from 'react';
-import Storyblok from '@/lib/storyblok';
+import Head from 'next/head';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
-import Link from 'next/link';
+import Hero from '@components/Hero';
+import CategoryTile from '@components/CategoryTile';
 
-const CatalogLandingPage = ({ data }) => {
-  const sbPageID = 91619610;
-  console.log(data);
+const HomePage = () => {
+
+  const headData = {
+    title: 'Home',
+    ogTitle: 'Home',
+    ogUrl: 'https://www.stumpfballoons.com',
+    ogImage: '/images/social-image.jpg',
+    ogType: 'website',
+    ogDescription:
+      'Hot air ballooning banners, equipment and repair station since 1975',
+    canonicalUrl: 'https://www.stumpfballoons.com',
+  };
+
+  const images = {
+    repairstation: '/images/repair-station.jpg',
+    catalog: '/images/equipment-catalog.jpg',
+    banners: '/images/banners.jpg',
+    balloonbuilding: '/images/balloon-building.jpg',
+  };
 
   return (
     <>
-      <Header />
-      <section>
-          <h1>Equipment Catalog</h1>
-          <h2>All Products:</h2>
-            {data.map(page => {
-              if(page.id !== sbPageID) {
-                return (
-                  <ul>
-                    <Link href={`/equipment-catalog/${page.slug}`}><li>{page.content.name}</li></Link>
-                  </ul>
-                );
-              }
-            })}
-      </section>
+      <Head>
+        <title>{`${headData.ogTitle} | Stumpf Balloons`}</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content={headData.ogDescription} />
+        <meta
+          property="og:title"
+          content={`${headData.ogTitle} | Stumpf Balloons`}
+        />
+        <meta property="og:url" content={headData.ogUrl} />
+        <meta property="og:image" content={headData.ogImage} />
+        <meta property="og:type" content={headData.ogType} />
+        <meta property="og:description" content={headData.ogDescription} />
+        <link rel="canonical" href={headData.canonicalUrl} />
+      </Head>
+      <main id="maincontent" className="bg-white">
+        <Header />
+        <Hero
+          headerText="Catalog"
+          imgSrc="/images/sb-bg-mobile.jpg"
+          imgAlt="Paul flying a home build balloon"
+          withBtn
+          btnText="Place an Order"
+          btnUrl="/contact"
+        />
+        <section className="mx-auto max-w-screen-xl mb-8 p-8 text-black text-base">
+          <h2 className="text-baseLg mb-4">Welcome to the Stumpf Balloons online catalog!</h2>
+          <p className="mb-4">text content...</p>
+        </section>
+        {/* <section className="mx-auto max-w-screen-xl mb-8 flex flex-col sm:flex-row items-center sm:justify-between">
+          <CategoryTile img={images.repairstation} alt='photo of pauls repair station' text='Product Category...' url='/repair-station' />
+          <CategoryTile img={images.banners} alt='photo of pauls repair station' text='Product Category...' url='/banners' />
+          <CategoryTile img={images.balloonbuilding} alt='photo of pauls repair station' text='Product Category...' url='/balloon-building' />
+          <CategoryTile img={images.repairstation} alt='photo of pauls repair station' text='Product Category...' url='/repair-station' />
+          <CategoryTile img={images.banners} alt='photo of pauls repair station' text='Product Category...' url='/banners' />
+          <CategoryTile img={images.balloonbuilding} alt='photo of pauls repair station' text='Product Category...' url='/balloon-building' />
+        </section> */}
+      </main>
       <Footer />
     </>
-  );
+  )
 }
 
-export async function getStaticProps() {
-
-  let sbParams = {
-    // change to `published` to load the published version
-    version: "draft",
-  };
-
-  let { data } = await Storyblok.get(`cdn/stories/`, sbParams);
-
-  return {
-    props: {
-      data: data.stories
-    },
-    revalidate: 3600, // revalidate every hour
-  };
-}
-
-export default CatalogLandingPage;
+export default HomePage;

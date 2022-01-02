@@ -25,7 +25,6 @@ const divStyles = [
   'h-20',
   'bg-white',
   'p-4',
-  // 'sm:p-4',
 ];
 
 const navStyles = [
@@ -38,7 +37,7 @@ const navStyles = [
 
 const listStyles = [
   'flex',
-  'flex-col', // change to 'flex-row' for desktop view
+  'flex-col',
   'text-center',
   'bg-white',
   'm-0',
@@ -67,14 +66,15 @@ export default class Header extends React.Component {
     render() {
 
       return (
-        <>
           <header className={clsx(headerStyles, this.state.isOpen ? 'h-[251px]' : 'h-20')}>
             <div className={clsx(divStyles)}>
-              <div>
-                <h1 className="text-black font-header text-headerLg">Stumpf Balloons</h1>
-                {/* <SBLogo /> */}
+              <div className="cursor-pointer">
+                <Link href="/">
+                  <h1 className="text-black font-header text-headerLg">Stumpf Balloons</h1>
+                  {/* <SBLogo /> */}
+                </Link>
               </div>
-              <div className="m-[20px] cursor-pointer">
+              <div className="m-[20px] cursor-pointer text-black">
                 {this.state.isOpen &&
                 <X onClick={this.handleCloseNav} />
                 }
@@ -108,7 +108,6 @@ export default class Header extends React.Component {
               </ul>
             </nav>
           </header>
-        </>
       )
     }
   }
