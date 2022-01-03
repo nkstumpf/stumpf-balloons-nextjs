@@ -32,7 +32,7 @@ module.exports = {
 
     fontFamily: {
       header: ['Nunito', 'Helvetica', 'Arial', 'sans-serif'],
-      sans: ['proxima-nova', 'Arial', 'sans-serif']
+      base: ['Work Sans', 'sans-serif']
     },
 
     fontSize: {

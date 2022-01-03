@@ -3,7 +3,9 @@ import Head from 'next/head';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Hero from '@components/Hero';
-import CategoryTile from '@components/CategoryTile';
+import ContentBlock from '@/components/ContentBlock';
+import Gallery from '@/components/Gallery';
+import GalleryTile from '@/components/GalleryTile';
 import Rule from '@components/Rule';
 
 const HomePage = () => {
@@ -50,17 +52,20 @@ const HomePage = () => {
           btnText="Start Here"
           btnUrl="#start-here"
         />
-        <section id="start-here" className="mx-auto max-w-screen-xl mb-8 p-4 xl:px-0 text-black text-base">
-          <h2 className="text-baseLg mb-4">Welcome to the Stumpf Balloons web site and online catalog!</h2>
+        <ContentBlock className="mx-auto max-w-screen-xl mb-8 p-4 xl:px-0 text-black">
+          <h2 className="mb-4 text-headerSm">Welcome to the Stumpf Balloons web site and online catalog!</h2>
           <p className="mb-4">Stumpf Balloons offers an extensive assortment of products for Hot Air Balloonists, and one of the most comprehensive selections of hot air ballooning equipment and services available anywhere in the world. Even if you're not a balloonist, you will still see many unique and hard-to-find items throughout our site.</p>
           <p className="mb-4">As always, I offer friendly professional advice from a real live person, M-F 9-5 Eastern time.</p>
-          <p>Happy surfing! Paul S. Stumpf - Owner.</p>
-        </section>
-        <section className="mx-auto max-w-screen-xl mb-8 flex flex-col sm:flex-row items-center sm:justify-between">
-          <CategoryTile img={images.repairstation} alt='photo of pauls repair station' text='Repair Station' url='/repair-station' />
-          <CategoryTile img={images.banners} alt='photo of pauls repair station' text='Banners' url='/banners' />
-          <CategoryTile img={images.balloonbuilding} alt='photo of pauls repair station' text='Balloon Building' url='/balloon-building' />
-        </section>
+          <p className="">Happy surfing! Paul S. Stumpf - Owner.</p>
+        </ContentBlock>
+        <Gallery className="mx-auto max-w-screen-xl mb-8 flex flex-wrap justify-evenly">
+          <GalleryTile img={images.repairstation} alt='photo of pauls repair station' text='Repair Station' url='/repair-station' />
+          <GalleryTile img={images.banners} alt='photo of pauls repair station' text='Banners' url='/banners' />
+          <GalleryTile img={images.balloonbuilding} alt='photo of pauls repair station' text='Balloon Building' url='/balloon-building' />
+          <GalleryTile img={images.balloonbuilding} alt='photo of pauls repair station' text='Another Category...' url='/balloon-building' />
+          <GalleryTile img={images.balloonbuilding} alt='photo of pauls repair station' text='Another Category...' url='/balloon-building' />
+          <GalleryTile img={images.balloonbuilding} alt='photo of pauls repair station' text='Another Category...' url='/balloon-building' />
+        </Gallery>
         <Rule />
         <Footer />
       </main>

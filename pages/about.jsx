@@ -3,32 +3,7 @@ import Head from 'next/head';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Hero from '@components/Hero';
-import Banner from '@components/Banner';
 import Button from '@components/Button';
-
-// section styles
-
-    // & h1, h2, h3, h4, h5 {
-    //     text-align: center;
-    //     font-family: ${(props) => props.theme.fonts.heading};
-    //     font-size: ${(props) => props.theme.fonts.sizes.heading};
-    // }
-
-    // & p {
-    //     text-align: left;
-    //     margin: 16px;
-    //     font-family: ${(props) => props.theme.fonts.body};
-    //     line-height: ${(props) => props.theme.fonts.sizes.headingsm};
-    // }
-
-    // .flexbox {
-    //     display: flex;
-    //     justify-content: center;
-
-    //     Button {
-    //     margin-bottom: 16px;
-    //     }
-    // }
 
 const About = () => {
 
@@ -63,7 +38,6 @@ const About = () => {
             <Header />
             <section>
             <Hero headerText="About" imgSrc="/images/sb-bg-mobile.jpg" imgAlt="Paul Stumpf" />
-            <Banner btnText="Contact" btnUrl="/contact" snapLink="#about-paul" />
             <h1 id="about-paul">About Paul</h1>
             <p>Paul S. Stumpf is the owner and operator of FAA Certified Hot Air Balloon Repair Station RG5R170N.</p>
             <img src="/images/paul.jpg" alt="Paul Stumpf" width="320px" height="auto" />

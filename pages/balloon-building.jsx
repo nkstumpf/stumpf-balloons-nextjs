@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Hero from '@components/Hero';
-import CategoryTile from '@components/CategoryTile';
+import CategoryTile from '@/components/GalleryTile';
 
 const HomePage = () => {
 

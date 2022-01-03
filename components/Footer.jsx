@@ -14,11 +14,15 @@ const divStyles = [
     'w-full',
     'max-w-screen-xl',
     'p-4',
-    'text-white',
+    'text-black',
     'text-baseLg',
     'font-header',
-    'bg-black',
     'rounded-t-lg',
+    'border-solid',
+    'border-t-black',
+    'border-t-2',
+    'border-r-2',
+    'border-l-2',
 ];
 
  const Footer = () => {

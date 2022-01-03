@@ -7,14 +7,11 @@ const primary = [
     'font-header',
     'text-baseLg',
     'p-2',
-    'border-solid',
-    'border-teal',
-    'border-2',
-    'bg-teal',
+    'bg-gradient-to-r',
+    'from-indigo',
+    'to-teal',
     'rounded',
-    'hover:text-teal',
-    'hover:border-white',
-    'hover:bg-white',
+    'hover:text-black',
 ];
 
 const secondary = [
