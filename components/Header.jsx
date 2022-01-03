@@ -6,14 +6,14 @@ import clsx from 'clsx';
 
 const headerStyles = [
   'bg-white',
-  'h-20',
   'w-full',
-  'flex',
-  'flex-col',
-  'items-center',
+  'h-20',
   'fixed',
   'overflow-hidden',
   'z-50',
+  'flex',
+  'flex-col',
+  'items-center',
 ];
 
 const divStyles = [
