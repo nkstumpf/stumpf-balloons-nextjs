@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import Header from '@components/Header';
-import Footer from '@components/Footer';
-import Hero from '@components/Hero';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Hero from '@/components/Hero';
 import ContentBlock from '@/components/ContentBlock';
 import Gallery from '@/components/Gallery';
 import GalleryTile from '@/components/GalleryTile';
@@ -58,7 +58,7 @@ const HomePage = () => {
           <p className="mb-4">As always, I offer friendly professional advice from a real live person, M-F 9-5 Eastern time.</p>
           <p className="">Happy surfing! Paul S. Stumpf - Owner.</p>
         </ContentBlock>
-        <Gallery className="mx-auto max-w-screen-xl mb-8 flex flex-wrap justify-evenly">
+        <Gallery>
           <GalleryTile img={images.repairstation} alt='photo of pauls repair station' text='Repair Station' url='/repair-station' />
           <GalleryTile img={images.banners} alt='photo of pauls repair station' text='Banners' url='/banners' />
           <GalleryTile img={images.balloonbuilding} alt='photo of pauls repair station' text='Balloon Building' url='/balloon-building' />

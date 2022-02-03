@@ -17,12 +17,7 @@ const divStyles = [
     'text-black',
     'text-baseLg',
     'font-header',
-    'rounded-t-lg',
-    'border-solid',
-    'border-t-black',
-    'border-t-2',
-    'border-r-2',
-    'border-l-2',
+    'border-t-2'
 ];
 
  const Footer = () => {
@@ -52,7 +47,7 @@ const divStyles = [
                             <a>Paul's Photography</a>
                         </Link>
                     </li>
-                    <li className="flex items-center hover:text-teal">
+                    <li className="flex items-center">
                         <p className="mr-4">&copy;</p>
                         <p>Stumpf Balloons & Banners {new Date().getFullYear()}</p>
                     </li>

@@ -6,7 +6,7 @@ import Hero from '@/components/Hero';
 import Gallery from '@/components/Gallery';
 import GalleryTile from '@/components/GalleryTile';
 
-const HomePage = () => {
+const EnvelopeStorage = () => {
 
   const headData = {
     title: 'Home',
@@ -46,7 +46,7 @@ const HomePage = () => {
       <main id="maincontent" className="bg-white">
         <Header />
         <Hero
-          headerText="Catalog"
+          headerText="Envelope Storage"
           imgSrc="/images/sb-bg-mobile.jpg"
           imgAlt="Paul flying a home build balloon"
           withBtn
@@ -54,25 +54,12 @@ const HomePage = () => {
           btnUrl="/contact"
         />
         <section className="mx-auto max-w-screen-xl mb-8 p-8 text-black text-base">
-          <h2 className="text-baseLg mb-4">Welcome to the Stumpf Balloons online catalog!</h2>
+          <h2 className="text-baseLg mb-4">Envelope Storage</h2>
         </section>
-        <Gallery>
-          <GalleryTile img={images.repairstation} alt='placeholder' text='Banner Bags' url='/equipment-catalog/banner-bags' />
-          <GalleryTile img={images.repairstation} alt='placeholder' text='Competition' url='/equipment-catalog/competition' />
-          <GalleryTile img={images.repairstation} alt='placeholder' text='Envelope Storage' url='/equipment-catalog/envelope-storage' />
-          <GalleryTile img={images.repairstation} alt='placeholder' text='General Storage' url='/equipment-catalog/general-storage' />
-          <GalleryTile img={images.repairstation} alt='placeholder' text='Hardware' url='/equipment-catalog/hardware' />
-          <GalleryTile img={images.repairstation} alt='placeholder' text='Inflator Fans' url='/equipment-catalog/inflator-fans' />
-          <GalleryTile img={images.repairstation} alt='placeholder' text='Lines & Harnesses' url='/equipment-catalog/lines-and-harnesses' />
-          <GalleryTile img={images.repairstation} alt='placeholder' text='Quick Releases' url='/equipment-catalog/quick-releases' />
-          <GalleryTile img={images.repairstation} alt='placeholder' text='Refueling Adaptors' url='/equipment-catalog/refueling-adaptors' />
-          <GalleryTile img={images.repairstation} alt='placeholder' text='Repair Aids' url='/equipment-catalog/repair-aids' />
-          <GalleryTile img={images.repairstation} alt='placeholder' text='Tank Covers' url='/equipment-catalog/tank-covers' />
-        </Gallery>
       </main>
       <Footer />
     </>
   )
 }
 
-export default HomePage;
+export default EnvelopeStorage;
