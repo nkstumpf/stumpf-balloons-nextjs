@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Hero from '@components/Hero';
 import CategoryTile from '@/components/GalleryTile';
 
-const HomePage = () => {
+const BalloonBuilding = () => {
 
   const headData = {
     title: 'Home',
@@ -69,4 +70,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage;
+export default BalloonBuilding;

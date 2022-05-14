@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { Camera, Facebook, Mail, User } from 'react-feather';
 import clsx from 'clsx';

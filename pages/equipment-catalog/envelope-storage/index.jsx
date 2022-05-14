@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Storyblok from '@/lib/storyblok';
 import Head from 'next/head';
 import Header from '@/components/Header';
@@ -77,6 +78,6 @@ export async function getStaticProps() {
     },
     revalidate: 3600, // revalidate every hour
   };
-};
+}
 
 export default EnvelopeStorage;

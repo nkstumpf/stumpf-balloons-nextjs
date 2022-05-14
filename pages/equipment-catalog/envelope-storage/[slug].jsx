@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Storyblok from '@/lib/storyblok';
 import Header from '@/components/Header';
@@ -58,7 +59,7 @@ export async function getStaticPaths() {
     paths,
     fallback: false
   };
-};
+}
 
 export async function getStaticProps({ params }) {
   let slug = params.slug;
@@ -76,6 +77,6 @@ export async function getStaticProps({ params }) {
     },
     revalidate: 3600, // revalidate every hour
   };
-};
+}
 
 export default ProductPage;

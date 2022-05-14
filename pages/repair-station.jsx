@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Hero from '@components/Hero';
 import Banner from '@components/Banner';

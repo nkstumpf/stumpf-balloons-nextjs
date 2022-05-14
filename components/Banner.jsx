@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from '@components/Button';
 import { ArrowDownCircle } from 'react-feather';
 
@@ -10,5 +11,11 @@ const Banner = ({btnText, btnUrl, snapLink}) => {
         </div>
     )
 }
+
+Banner.propTypes = {
+    btnText: PropTypes.string,
+    btnUrl: PropTypes.string,
+    snapLink: PropTypes.string
+};
 
 export default Banner;
