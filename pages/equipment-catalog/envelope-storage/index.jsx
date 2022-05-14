@@ -1,12 +1,11 @@
 import React from 'react';
+import Storyblok from '@/lib/storyblok';
 import Head from 'next/head';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
-import Gallery from '@/components/Gallery';
-import GalleryTile from '@/components/GalleryTile';
 
-const EnvelopeStorage = () => {
+const EnvelopeStorage = ({ story }) => {
 
   const headData = {
     title: 'Home',
@@ -60,6 +59,24 @@ const EnvelopeStorage = () => {
       <Footer />
     </>
   )
-}
+};
+
+export async function getStaticProps() {
+
+  let sbParams = {
+    version: "draft", // or published
+  };
+
+  let { data } = await Storyblok.get(`cdn/stories/equipment-catalog/envelope-storage/`, sbParams);
+
+  console.log(data);
+
+  return {
+    props: {
+      story: data ? data.story : null
+    },
+    revalidate: 3600, // revalidate every hour
+  };
+};
 
 export default EnvelopeStorage;
