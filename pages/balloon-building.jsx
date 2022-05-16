@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Head from 'next/head';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
@@ -67,7 +66,7 @@ const BalloonBuilding = () => {
       </main>
       <Footer />
     </>
-  )
-}
+  );
+};
 
 export default BalloonBuilding;

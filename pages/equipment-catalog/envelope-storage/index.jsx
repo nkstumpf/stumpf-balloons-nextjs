@@ -7,23 +7,17 @@ import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 
 const EnvelopeStorage = ({ story }) => {
+  // const { content } = story;
 
   const headData = {
-    title: 'Home',
-    ogTitle: 'Home',
+    title: `Stumpf Balloons - ${story.page_name}`,
+    ogTitle: `Stumpf Balloons - ${story.page_name}`,
     ogUrl: 'https://www.stumpfballoons.com',
     ogImage: '/images/social-image.jpg',
     ogType: 'website',
     ogDescription:
-      'Hot air ballooning banners, equipment and repair station since 1975',
+      'Hot air ballooning envelope storage, balloon envelope bags, storage solutions',
     canonicalUrl: 'https://www.stumpfballoons.com',
-  };
-
-  const images = {
-    repairstation: '/images/repair-station.jpg',
-    catalog: '/images/equipment-catalog.jpg',
-    banners: '/images/banners.jpg',
-    balloonbuilding: '/images/balloon-building.jpg',
   };
 
   return (
@@ -46,7 +40,7 @@ const EnvelopeStorage = ({ story }) => {
       <main id="maincontent" className="bg-white">
         <Header />
         <Hero
-          headerText="Envelope Storage"
+          headerText={story.page_name}
           imgSrc="/images/sb-bg-mobile.jpg"
           imgAlt="Paul flying a home build balloon"
           withBtn
@@ -54,12 +48,16 @@ const EnvelopeStorage = ({ story }) => {
           btnUrl="/contact"
         />
         <section className="mx-auto max-w-screen-xl mb-8 p-8 text-black text-base">
-          <h2 className="text-baseLg mb-4">Envelope Storage</h2>
+          <h2 className="text-baseLg mb-4">{story.page_name}</h2>
         </section>
       </main>
       <Footer />
     </>
-  )
+  );
+};
+
+EnvelopeStorage.propTypes = {
+  story: PropTypes.object
 };
 
 export async function getStaticProps() {

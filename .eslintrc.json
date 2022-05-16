@@ -19,6 +19,12 @@
     "react"
   ],
   "rules": {
+    "semi": 2,
+    "indent": [
+      "error",
+      2
+    ],
+    "react/no-unescaped-entities": 0
   },
   "settings": {
     "react": {

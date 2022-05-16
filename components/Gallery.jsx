@@ -22,4 +22,10 @@ const Gallery = ({ title, children, className, ...props }) => {
   );
 };
 
+Gallery.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.node,
+  className: PropTypes.string
+};
+
 export default Gallery;

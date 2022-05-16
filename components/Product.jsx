@@ -1,5 +1,4 @@
-import React from "react"
-import PropTypes from 'prop-types';
+import React from "react";
 import PropTypes from 'prop-types';
 
 const Product = ({ content, ...props }) => {
@@ -9,7 +8,7 @@ const Product = ({ content, ...props }) => {
     content.available_colors.forEach(color => {
       colorNames.push(color);
     });
-  };
+  }
   return (
     <section {...props}>
       <h1>{content.name}</h1>
@@ -17,9 +16,9 @@ const Product = ({ content, ...props }) => {
       <p>{content.description}</p>
       <h2>Available Colors:</h2>
       <ul>
-      {colorNames.map(color => {
-        return <li>{color}</li>;
-      })}
+        {colorNames.map(color => {
+          return <li key={color}>{color}</li>;
+        })}
       </ul>
       <p>{content.color_details}</p>
       <img src={content.images[0].filename} alt={content.name} />
@@ -29,7 +28,7 @@ const Product = ({ content, ...props }) => {
   );
 };
 
-Product.PropTypes = {
+Product.propTypes = {
   content: PropTypes.object,
 };
 

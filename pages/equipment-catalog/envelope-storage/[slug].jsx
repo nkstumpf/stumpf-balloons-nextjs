@@ -21,7 +21,7 @@ const ProductPage = ({ story }) => {
 
   return (
     <>
-    <Head>
+      <Head>
         <title>{`${headData.ogTitle} | Stumpf Balloons`}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -43,7 +43,11 @@ const ProductPage = ({ story }) => {
       <Footer />
     </>
   );
-}
+};
+
+ProductPage.propTypes = {
+  story: PropTypes.object,
+};
 
 export async function getStaticPaths() {
 
@@ -51,7 +55,7 @@ export async function getStaticPaths() {
 
   const paths = Object.keys(data.links).map((linkKey) => {
 
-     return { params: { slug: data.links[linkKey].slug.replace('equipment-catalog/envelope-storage/', '')}};
+    return { params: { slug: data.links[linkKey].slug.replace('equipment-catalog/envelope-storage/', '')}};
 
   });
 
