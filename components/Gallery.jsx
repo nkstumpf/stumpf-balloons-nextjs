@@ -8,7 +8,8 @@ const styles = [
   'mb-8',
   'flex',
   'flex-wrap',
-  'justify-evenly'
+  'justify-center',
+  'gap-4'
 ];
 
 const Gallery = ({ title, children, className, ...props }) => {

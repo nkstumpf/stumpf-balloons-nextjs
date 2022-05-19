@@ -4,14 +4,15 @@ import Storyblok from '@/lib/storyblok';
 import Head from 'next/head';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Hero from '@/components/Hero';
+import Gallery from '@/components/Gallery';
+import GalleryTile from '@/components/GalleryTile';
 
-const EnvelopeStorage = ({ story }) => {
-  // const { content } = story;
+const EnvelopeStorage = ({ story, products }) => {
+  const { content } = story;
 
   const headData = {
-    title: `Stumpf Balloons - ${story.page_name}`,
-    ogTitle: `Stumpf Balloons - ${story.page_name}`,
+    title: `Stumpf Balloons - ${content.page_name}`,
+    ogTitle: `Stumpf Balloons - ${content.page_name}`,
     ogUrl: 'https://www.stumpfballoons.com',
     ogImage: '/images/social-image.jpg',
     ogType: 'website',
@@ -39,17 +40,13 @@ const EnvelopeStorage = ({ story }) => {
       </Head>
       <main id="maincontent" className="bg-white">
         <Header />
-        <Hero
-          headerText={story.page_name}
-          imgSrc="/images/sb-bg-mobile.jpg"
-          imgAlt="Paul flying a home build balloon"
-          withBtn
-          btnText="Place an Order"
-          btnUrl="/contact"
-        />
-        <section className="mx-auto max-w-screen-xl mb-8 p-8 text-black text-base">
-          <h2 className="text-baseLg mb-4">{story.page_name}</h2>
-        </section>
+        <Gallery>
+          {products.map(product => (
+            product.name !== 'Landing Page' && (
+              <GalleryTile key={product.id} img={product.content.images[0].filename} alt={product.name} text={product.name} url={`/equipment-catalog/envelope-storage/${product.slug}`} />
+            )
+          ))}
+        </Gallery>
       </main>
       <Footer />
     </>
@@ -57,22 +54,27 @@ const EnvelopeStorage = ({ story }) => {
 };
 
 EnvelopeStorage.propTypes = {
-  story: PropTypes.object
+  story: PropTypes.object,
+  products: PropTypes.array,
 };
 
 export async function getStaticProps() {
 
-  let sbParams = {
+  const sbParams = {
     version: "draft", // or published
   };
 
-  let { data } = await Storyblok.get(`cdn/stories/equipment-catalog/envelope-storage/`, sbParams);
+  const products = await Storyblok.get('cdn/stories', {
+    version: "draft", // or published
+    starts_with: "equipment-catalog/envelope-storage/"
+  });
 
-  console.log(data);
+  const { data } = await Storyblok.get('cdn/stories/equipment-catalog/envelope-storage/', sbParams);
 
   return {
     props: {
-      story: data ? data.story : null
+      story: data ? data.story : null,
+      products: products ? products.data.stories : null
     },
     revalidate: 3600, // revalidate every hour
   };

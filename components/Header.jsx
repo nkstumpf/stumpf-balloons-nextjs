@@ -66,48 +66,51 @@ export default class Header extends React.Component {
   render() {
 
     return (
-      <header className={clsx(headerStyles, this.state.isOpen ? 'h-[251px]' : 'h-20')}>
-        <div className={clsx(divStyles)}>
-          <div className="cursor-pointer">
-            <Link href="/">
-              <h1 className="text-black font-header text-headerLg">Stumpf Balloons</h1>
-              {/* <SBLogo /> */}
-            </Link>
-          </div>
-          <div className="m-[20px] cursor-pointer text-black">
-            {this.state.isOpen &&
+      <>
+        <header className={clsx(headerStyles, this.state.isOpen ? 'h-[251px]' : 'h-20')}>
+          <div className={clsx(divStyles)}>
+            <div className="cursor-pointer">
+              <Link href="/">
+                <h1 className="text-black font-header text-headerLg">Stumpf Balloons</h1>
+                {/* <SBLogo /> */}
+              </Link>
+            </div>
+            <div className="m-[20px] cursor-pointer text-black">
+              {this.state.isOpen &&
                 <X onClick={this.handleCloseNav} />
-            }
-            {!this.state.isOpen &&
+              }
+              {!this.state.isOpen &&
                 <Menu onClick={this.handleOpenNav} />
-            }
+              }
+            </div>
           </div>
-        </div>
-        <nav className={clsx(navStyles)} ref={this.mobileNav}>
-          <ul className={clsx(listStyles)}>
-            <li className="border-black border-b p-1 bg-white sm:border-none">
-              <Link href="/repair-station">
-                <a className="no-underline hover:text-teal text-black text-baseLg font-header">Repair Station</a>
-              </Link>
-            </li>
-            <li className="border-black border-b p-1 bg-white sm:border-none">
-              <Link href="/equipment-catalog">
-                <a className="no-underline hover:text-teal text-black text-baseLg font-header">Equipment Catalog</a>
-              </Link>
-            </li>
-            <li className="border-black border-b p-1 bg-white sm:border-none">
-              <Link href="/banners">
-                <a className="no-underline hover:text-teal text-black text-baseLg font-header">Banners</a>
-              </Link>
-            </li>
-            <li className="p-1 bg-white">
-              <Link href="/balloon-building">
-                <a className="no-underline hover:text-teal text-black text-baseLg font-header">Balloon Building</a>
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+          <nav className={clsx(navStyles)} ref={this.mobileNav}>
+            <ul className={clsx(listStyles)}>
+              <li className="border-black border-b p-1 bg-white sm:border-none">
+                <Link href="/repair-station">
+                  <a className="no-underline hover:text-teal text-black text-baseLg font-header">Repair Station</a>
+                </Link>
+              </li>
+              <li className="border-black border-b p-1 bg-white sm:border-none">
+                <Link href="/equipment-catalog">
+                  <a className="no-underline hover:text-teal text-black text-baseLg font-header">Equipment Catalog</a>
+                </Link>
+              </li>
+              <li className="border-black border-b p-1 bg-white sm:border-none">
+                <Link href="/banners">
+                  <a className="no-underline hover:text-teal text-black text-baseLg font-header">Banners</a>
+                </Link>
+              </li>
+              <li className="p-1 bg-white">
+                <Link href="/balloon-building">
+                  <a className="no-underline hover:text-teal text-black text-baseLg font-header">Balloon Building</a>
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <div className="h-20" />
+      </>
     );
   }
 }

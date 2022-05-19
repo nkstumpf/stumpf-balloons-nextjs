@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const GalleryTile = ( {img, alt, text, url} ) => {
   return (
-    <div className="w-80 h-80 overflow-hidden rounded-t" id="services-section">
+    <div className="w-80 overflow-hidden rounded-t" id="services-section">
       <Link href={url}>
         <a>
           <picture>

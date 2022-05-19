@@ -40,7 +40,6 @@ const headerStyles = [
 const Hero = ({imgSrc, imgAlt, headerText, withBtn, btnText, btnUrl}) => {
   return (
     <>
-      <div className="h-20" />
       <section className={clsx(containerStyles)}>
         <picture className="w-full h-full relative z-10">
           <img src={imgSrc} alt={imgAlt} width="100%" height="auto"/>
