@@ -24,7 +24,8 @@
       "error",
       2
     ],
-    "react/no-unescaped-entities": 0
+    "react/no-unescaped-entities": 0,
+    "quotes": [2, "single"]
   },
   "settings": {
     "react": {

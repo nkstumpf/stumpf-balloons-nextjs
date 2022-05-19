@@ -17,7 +17,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-feather": "^2.0.8",
-    "storyblok-js-client": "^4.1.6"
+    "storyblok-js-client": "^4.1.6",
+    "storyblok-rich-text-react-renderer": "^2.5.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.0",

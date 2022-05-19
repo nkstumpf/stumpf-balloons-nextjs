@@ -1,73 +1,66 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Hero from '@components/Hero';
 import Banner from '@components/Banner';
 import Carousel from '@components/Carousel';
-import CarouselCard from '@/components/CarouselCard';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
-import { ChevronLeft, ChevronRight } from 'react-feather';
+
+const images = [
+  {
+    filename: '/images/sb-repair-station-1.jpg',
+    alt: 'Fabric cutting station',
+    caption: 'Fabric cutting station'
+  },
+  {
+    filename: '/images/sb-repair-station-2.jpg',
+    alt: 'Fabric layout and storage',
+    caption: 'Fabric layout and storage'
+  },
+  {
+    filename: '/images/sb-repair-station-3.jpg',
+    alt: 'Sewing machine stations',
+    caption: 'Sewing machine stations'
+  },
+  {
+    filename: '/images/sb-repair-station-4.jpg',
+    alt: 'Burner service bench',
+    caption: 'Burner service bench'
+  },
+  {
+    filename: '/images/sb-repair-station-5.jpg',
+    alt: 'Paul\'s office',
+    caption: 'Paul\'s office'
+  },
+  {
+    filename: '/images/sb-repair-station-6.jpg',
+    alt: 'Gore by gore inspection',
+    caption: 'Gore by gore inspection'
+  },
+  {
+    filename: '/images/sb-repair-station-7.jpg',
+    alt: 'Loading dock',
+    caption: 'Loading dock'
+  },
+  {
+    filename: '/images/sb-repair-station-8.jpg',
+    alt: 'Loading dock 2',
+    caption: 'Bring er\' up!'
+  },
+  {
+    filename: '/images/sb-repair-station-9.jpg',
+    alt: 'Ballloon bagging / Dog bagging',
+    caption: 'Ballloon bagging / Dog bagging'
+  },
+  {
+    filename: '/images/sb-repair-station-10.jpg',
+    alt: 'What a view!',
+    caption: 'What a view!'
+  }
+];
 
 const RepairStation = () => {
 
-  // slider state
-  const [activeCard, setActiveCard] = useState(0);
-
-  // default slider data
-  const cardMeta = [
-    {
-      name: 'Card 1',
-      isActive: true
-    },
-    {
-      name: 'Card 2',
-      isActive: false
-    },
-    {
-      name: 'Card 3',
-      isActive: false
-    },
-    {
-      name: 'Card 4',
-      isActive: false
-    },
-    {
-      name: 'Card 5',
-      isActive: false
-    },
-    {
-      name: 'Card 6',
-      isActive: false
-    },
-    {
-      name: 'Card 7',
-      isActive: false
-    },
-    {
-      name: 'Card 8',
-      isActive: false
-    },
-    {
-      name: 'Card 9',
-      isActive: false
-    },
-    {
-      name: 'Card 10',
-      isActive: false
-    },
-  ];
-
-  // update active slide
-  const changeCard = cardIndex => {
-    for(let i = 0; i < cardMeta.length; i++) {
-      if(cardIndex === i) {
-        cardMeta[i].isActive = true;
-        setActiveCard(cardIndex);
-      } else {
-        cardMeta[i].isActive = false;
-      }
-    }
-  };
 
   const headData = {
     title: 'Hot Air Balloon Repair Station',
@@ -128,23 +121,7 @@ const RepairStation = () => {
         </section>
         <section>
           <h4 id="tour">Virtual Tour</h4>
-          <Carousel>
-            <CarouselCard active={activeCard === 0} imgSrc="/images/sb-repair-station-1.jpg" imgAlt="Fabric cutting station" caption="Fabric cutting station" />
-            <CarouselCard active={activeCard === 1} imgSrc="/images/sb-repair-station-2.jpg" imgAlt="Fabric layout and storage" caption="Fabric layout and storage" />
-            <CarouselCard active={activeCard === 2} imgSrc="/images/sb-repair-station-3.jpg" imgAlt="Sewing machine stations" caption="Sewing machine stations" />
-            <CarouselCard active={activeCard === 3} imgSrc="/images/sb-repair-station-4.jpg" imgAlt="Burner service bench" caption="Burner service bench" />
-            <CarouselCard active={activeCard === 4} imgSrc="/images/sb-repair-station-5.jpg" imgAlt="Paul's office" caption="Paul's office" />
-            <CarouselCard active={activeCard === 5} imgSrc="/images/sb-repair-station-6.jpg" imgAlt="Gore by gore inspection" caption="Gore by gore inspection" />
-            <CarouselCard active={activeCard === 6} imgSrc="/images/sb-repair-station-7.jpg" imgAlt="Loading dock" caption="Loading dock" />
-            <CarouselCard active={activeCard === 7} imgSrc="/images/sb-repair-station-8.jpg" imgAlt="Loading dock 2" caption="Bring er' up!" />
-            <CarouselCard active={activeCard === 8} imgSrc="/images/sb-repair-station-9.jpg" imgAlt="Ballloon bagging / Dog bagging" caption="Ballloon bagging / Dog bagging" />
-            <CarouselCard active={activeCard === 9} imgSrc="/images/sb-repair-station-10.jpg" imgAlt="What a view!" caption="What a view!" />
-          </Carousel>
-          <div className="flexbox">
-            <ChevronLeft className="icon" onClick={() => changeCard(activeCard - 1)} />
-            <p className="slider-number">{activeCard +1 } / 10</p>
-            <ChevronRight className="icon" onClick={() => changeCard(activeCard + 1)} />
-          </div>
+          <Carousel images={images} />
         </section>
       </section>
       <Footer />

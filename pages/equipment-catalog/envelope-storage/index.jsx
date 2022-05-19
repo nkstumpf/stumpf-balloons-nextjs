@@ -61,12 +61,12 @@ EnvelopeStorage.propTypes = {
 export async function getStaticProps() {
 
   const sbParams = {
-    version: "draft", // or published
+    version: 'draft', // or published
   };
 
   const products = await Storyblok.get('cdn/stories', {
-    version: "draft", // or published
-    starts_with: "equipment-catalog/envelope-storage/"
+    version: 'draft', // or published
+    starts_with: 'equipment-catalog/envelope-storage/'
   });
 
   const { data } = await Storyblok.get('cdn/stories/equipment-catalog/envelope-storage/', sbParams);

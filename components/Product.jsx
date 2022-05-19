@@ -1,5 +1,7 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
+import { render } from 'storyblok-rich-text-react-renderer';
+import Carousel from './Carousel';
 
 const Product = ({ content, ...props }) => {
   // if the product has color options:
@@ -9,11 +11,13 @@ const Product = ({ content, ...props }) => {
       colorNames.push(color);
     });
   }
+
   return (
-    <section {...props}>
+    <section className="mx-auto max-w-screen-xl mb-8 p-8" {...props}>
+      <Carousel images={content.images}/>
       <h1>{content.name}</h1>
       <p>${content.price}</p>
-      <p>{content.description}</p>
+      <p>{render(content.description)}</p>
       <h2>Available Colors:</h2>
       <ul>
         {colorNames.map(color => {
@@ -21,7 +25,6 @@ const Product = ({ content, ...props }) => {
         })}
       </ul>
       <p>{content.color_details}</p>
-      <img src={content.images[0].filename} alt={content.name} />
       <p>{content.size}</p>
       <p>{content.additional_options}</p>
     </section>
