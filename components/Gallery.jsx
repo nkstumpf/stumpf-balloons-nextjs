@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 const styles = [
-  'mx-auto',
-  'max-w-screen-xl',
   'mb-8',
   'flex',
   'flex-wrap',

@@ -1,4 +1,5 @@
-const colors = require('tailwindcss/colors')
+// eslint-disable-next-line no-unused-vars
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   mode: 'jit',
@@ -45,4 +46,4 @@ module.exports = {
     }
   },
   plugins: [],
-}
+};

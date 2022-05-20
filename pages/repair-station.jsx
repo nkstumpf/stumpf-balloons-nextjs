@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Hero from '@components/Hero';
-import Banner from '@components/Banner';
 import Carousel from '@components/Carousel';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
@@ -63,13 +62,12 @@ const RepairStation = () => {
 
 
   const headData = {
-    title: 'Hot Air Balloon Repair Station',
-    ogTitle: 'Hot Air Balloon Repair Station',
+    title: 'Repair Station',
+    ogTitle: 'Stumpf Balloons & Banners - FAA Certified Hot Air Balloon Repair Station',
     ogUrl: 'https://www.stumpfballoons.com/repair-station',
     ogImage: '/images/social-image.jpg',
     ogType: 'website',
-    ogDescription:
-           'Stumpf Balloons & Banners | Hot Air Balloon Repair Station',
+    ogDescription: 'Stumpf Balloons & Banners - Hot Air Balloon Repair Station',
     canonicalUrl: 'https://www.stumpfballoons.com/repair-station',
   };
   return (
@@ -79,10 +77,7 @@ const RepairStation = () => {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={headData.ogDescription} />
-        <meta
-          property="og:title"
-          content={`${headData.ogTitle} | Stumpf Balloons`}
-        />
+        <meta property="og:title" content={`${headData.ogTitle} | Stumpf Balloons`} />
         <meta property="og:url" content={headData.ogUrl} />
         <meta property="og:image" content={headData.ogImage} />
         <meta property="og:type" content={headData.ogType} />
@@ -90,40 +85,41 @@ const RepairStation = () => {
         <link rel="canonical" href={headData.canonicalUrl} />
       </Head>
       <Header />
-      <section>
-        <Hero headerText="Repair Station" imgSrc="/images/sb-bg-mobile.jpg" imgAlt="Paul Stumpf" />
-        <Banner btnText="Virtual Tour" btnUrl="#tour" snapLink="#tour" />
-        <h2>FAA Certified Hot Air Balloon Repair Station RG5R170N</h2>
-        <p>Certified for repair & maintenance of the following hot air balloon manufacturers:</p>
-        <ul>
-          <a href="https://ravenaerostar.com/"><li>Aerostar International Inc. - Authorized Factory Service Center</li></a>
-          <a href="http://www.fireflyballoons.net/"><li>Firefly Balloons (Balloon Works)</li></a>
-          <a href="http://adamsballoons.us/"><li>Adams Balloons</li></a>
-          <a href="https://cameronballoons.com/"><li>Cameron Balloons U.S.</li></a>
-          <a href="#"><li>Eagle Balloons Ltd.</li></a>
-          <a href="#"><li>Experimental / Amateur-Built Balloons</li></a>
-          <a href="#"><li>Experimental / Exhibition Category</li></a>
-          <a href="http://www.fireflyballoons.net/"><li>Galaxy Balloons (Firefly Balloons)</li></a>
-          <a href="https://www.headballoons.com/"><li>Head Ballooning Inc.</li></a>
-          <a href="https://www.kubicekballoons.eu/"><li>Kubicek Balloons</li></a>
-          <a href="https://www.lindstrand.com/"><li>Lindstrand Balloons Ltd.</li></a>
-          <a href="https://nationalballooning.weebly.com/"><li>National Ballooning</li></a>
-          <a href="#"><li>Thunder & Colt</li></a>
-          <a href="https://ultramagic.com/"><li>UltraMagic Balloons</li></a>
-        </ul>
-        <section>
-          <h3 id="services">Our Services:</h3>
+      <Hero headerText="Repair Station" imgSrc="/images/sb-bg-mobile.jpg" imgAlt="Paul Stumpf" />
+      <main>
+        <section className="flex flex-col gap-8 mb-8">
+          <h2>FAA Certified Hot Air Balloon Repair Station RG5R170N</h2>
+          <p>Certified for repair & maintenance of the following hot air balloon manufacturers:</p>
           <ul>
-            <li>Service...</li>
-            <li>Service...</li>
-            <li>Service...</li>
+            <a href="https://ravenaerostar.com/"><li>Aerostar International Inc. - Authorized Factory Service Center</li></a>
+            <a href="http://www.fireflyballoons.net/"><li>Firefly Balloons (Balloon Works)</li></a>
+            <a href="http://adamsballoons.us/"><li>Adams Balloons</li></a>
+            <a href="https://cameronballoons.com/"><li>Cameron Balloons U.S.</li></a>
+            <a href="#"><li>Eagle Balloons Ltd.</li></a>
+            <a href="#"><li>Experimental / Amateur-Built Balloons</li></a>
+            <a href="#"><li>Experimental / Exhibition Category</li></a>
+            <a href="http://www.fireflyballoons.net/"><li>Galaxy Balloons (Firefly Balloons)</li></a>
+            <a href="https://www.headballoons.com/"><li>Head Ballooning Inc.</li></a>
+            <a href="https://www.kubicekballoons.eu/"><li>Kubicek Balloons</li></a>
+            <a href="https://www.lindstrand.com/"><li>Lindstrand Balloons Ltd.</li></a>
+            <a href="https://nationalballooning.weebly.com/"><li>National Ballooning</li></a>
+            <a href="#"><li>Thunder & Colt</li></a>
+            <a href="https://ultramagic.com/"><li>UltraMagic Balloons</li></a>
           </ul>
+          <section>
+            <h3 id="services">Our Services:</h3>
+            <ul>
+              <li>Service...</li>
+              <li>Service...</li>
+              <li>Service...</li>
+            </ul>
+          </section>
+          <section className="text-center">
+            <h4 className="mb-4">Virtual Tour</h4>
+            <Carousel images={images} />
+          </section>
         </section>
-        <section>
-          <h4 id="tour">Virtual Tour</h4>
-          <Carousel images={images} />
-        </section>
-      </section>
+      </main>
       <Footer />
     </>
   );

@@ -26,14 +26,16 @@ const textOnly = [
 
 const ContentBlock = ({ variant, children, className, ...props }) => {
   return (
-    <section className={clsx(className)} {...props}>
+    <section className={clsx(variant, className)} {...props}>
       {children}
     </section>
   );
 };
 
 ContentBlock.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  variant: PropTypes.oneOf([imgAboveText, imgRight, imgLeft, textOnly])
 };
 
 ContentBlock.Image = ({ src, alt, className, ...props }) => {
@@ -41,6 +43,8 @@ ContentBlock.Image = ({ src, alt, className, ...props }) => {
     <img src={src} alt={alt} className={clsx(className)} {...props} />
   );
 };
+
+ContentBlock.Image.displayName = 'ContentBlock.Image';
 
 ContentBlock.Image.propTypes = {
   src: PropTypes.string.isRequired,
@@ -56,8 +60,11 @@ ContentBlock.Content = ({ children, className, ...props }) => {
   );
 };
 
+ContentBlock.Content.displayName = 'ContentBlock.Content';
+
 ContentBlock.Content.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string
 };
 
 

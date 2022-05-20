@@ -36,8 +36,8 @@ const ProductPage = ({ story }) => {
         <meta property="og:description" content={headData.ogDescription} />
         <link rel="canonical" href={headData.canonicalUrl} />
       </Head>
+      <Header />
       <main>
-        <Header />
         <Product content={content} />
       </main>
       <Footer />

@@ -16,8 +16,7 @@ const EnvelopeStorage = ({ story, products }) => {
     ogUrl: 'https://www.stumpfballoons.com',
     ogImage: '/images/social-image.jpg',
     ogType: 'website',
-    ogDescription:
-      'Hot air ballooning envelope storage, balloon envelope bags, storage solutions',
+    ogDescription:'Hot air ballooning envelope storage, balloon envelope bags, storage solutions',
     canonicalUrl: 'https://www.stumpfballoons.com',
   };
 
@@ -28,18 +27,16 @@ const EnvelopeStorage = ({ story, products }) => {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={headData.ogDescription} />
-        <meta
-          property="og:title"
-          content={`${headData.ogTitle} | Stumpf Balloons`}
-        />
+        <meta property="og:title" content={`${headData.ogTitle} | Stumpf Balloons`} />
         <meta property="og:url" content={headData.ogUrl} />
         <meta property="og:image" content={headData.ogImage} />
         <meta property="og:type" content={headData.ogType} />
         <meta property="og:description" content={headData.ogDescription} />
         <link rel="canonical" href={headData.canonicalUrl} />
       </Head>
+      <Header />
       <main>
-        <Header />
+        <h2>Products:</h2>
         <Gallery>
           {products.map(product => (
             product.name !== 'Landing Page' && (

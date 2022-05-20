@@ -6,7 +6,7 @@ import Hero from '@/components/Hero';
 import Gallery from '@/components/Gallery';
 import GalleryTile from '@/components/GalleryTile';
 
-const HomePage = () => {
+const CatalogHome = () => {
 
   const headData = {
     title: 'Home',
@@ -14,8 +14,7 @@ const HomePage = () => {
     ogUrl: 'https://www.stumpfballoons.com',
     ogImage: '/images/social-image.jpg',
     ogType: 'website',
-    ogDescription:
-      'Hot air ballooning banners, equipment and repair station since 1975',
+    ogDescription: 'Hot air ballooning banners, equipment and repair station since 1975',
     canonicalUrl: 'https://www.stumpfballoons.com',
   };
 
@@ -33,28 +32,18 @@ const HomePage = () => {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={headData.ogDescription} />
-        <meta
-          property="og:title"
-          content={`${headData.ogTitle} | Stumpf Balloons`}
-        />
+        <meta property="og:title" content={`${headData.ogTitle} | Stumpf Balloons`} />
         <meta property="og:url" content={headData.ogUrl} />
         <meta property="og:image" content={headData.ogImage} />
         <meta property="og:type" content={headData.ogType} />
         <meta property="og:description" content={headData.ogDescription} />
         <link rel="canonical" href={headData.canonicalUrl} />
       </Head>
-      <main id="maincontent" className="bg-white">
-        <Header />
-        <Hero
-          headerText="Catalog"
-          imgSrc="/images/sb-bg-mobile.jpg"
-          imgAlt="Paul flying a home build balloon"
-          withBtn
-          btnText="Place an Order"
-          btnUrl="/contact"
-        />
-        <section className="mx-auto max-w-screen-xl mb-8 p-8 text-black text-base">
-          <h2 className="text-baseLg mb-4">Welcome to the Stumpf Balloons online catalog!</h2>
+      <Header />
+      <Hero headerText="Equipment Catalog" imgSrc="/images/sb-bg-mobile.jpg" imgAlt="Paul flying a home build balloon" />
+      <main>
+        <section>
+          <h2>Product Categories:</h2>
         </section>
         <Gallery>
           <GalleryTile img={images.repairstation} alt='placeholder' text='Banner Bags' url='/equipment-catalog/banner-bags' />
@@ -75,4 +64,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default CatalogHome;
