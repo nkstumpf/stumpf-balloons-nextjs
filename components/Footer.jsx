@@ -8,16 +8,18 @@ const footerStyles = [
   'flex',
   'flex-col',
   'items-center',
+  'bg-black'
 ];
 
 const divStyles = [
   'w-full',
+  'flex',
+  'justify-between',
   'max-w-screen-xl',
-  'p-4',
-  'text-black',
-  'text-baseLg',
-  'font-header',
-  'border-t-2'
+  'p-8',
+  'text-white',
+  'text-base',
+  'font-header'
 ];
 
 const Footer = () => {
@@ -41,17 +43,17 @@ const Footer = () => {
               <a>Contact Info</a>
             </Link>
           </li>
-          <li className="flex items-center mb-4 hover:text-teal">
+          <li className="flex items-center mb-4 hover:text-teal last:mb-0">
             <Camera className="mr-4" />
             <Link href="/photo-blog">
-              <a>Paul&aposs Photography</a>
+              <a>Paul's Photography</a>
             </Link>
           </li>
-          <li className="flex items-center">
-            <p className="mr-4">&copy;</p>
-            <p>Stumpf Balloons & Banners {new Date().getFullYear()}</p>
-          </li>
         </ul>
+        <div className="flex items-center">
+          <p className="mr-4">&copy;</p>
+          <p>Stumpf Balloons & Banners {new Date().getFullYear()}</p>
+        </div>
       </div>
     </footer>
   );

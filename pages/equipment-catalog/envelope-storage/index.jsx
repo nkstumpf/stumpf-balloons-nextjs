@@ -38,7 +38,7 @@ const EnvelopeStorage = ({ story, products }) => {
         <meta property="og:description" content={headData.ogDescription} />
         <link rel="canonical" href={headData.canonicalUrl} />
       </Head>
-      <main id="maincontent" className="bg-white">
+      <main>
         <Header />
         <Gallery>
           {products.map(product => (

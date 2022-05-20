@@ -29,17 +29,17 @@ const divStyles = [
 
 const navStyles = [
   'z-30',
-  'bg-white',
+  'bg-black',
   'w-full',
   'max-w-screen-xl',
-  'm-0',
+  'm-0'
 ];
 
 const listStyles = [
   'flex',
   'flex-col',
   'text-center',
-  'bg-white',
+  'text-white',
   'm-0',
   'p-0',
 ];

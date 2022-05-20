@@ -36,7 +36,7 @@ const ProductPage = ({ story }) => {
         <meta property="og:description" content={headData.ogDescription} />
         <link rel="canonical" href={headData.canonicalUrl} />
       </Head>
-      <main id="maincontent" className="bg-white">
+      <main>
         <Header />
         <Product content={content} />
       </main>
@@ -69,7 +69,7 @@ export async function getStaticProps({ params }) {
   let slug = params.slug;
 
   let sbParams = {
-    version: "draft", // or published
+    version: 'draft', // or published
   };
 
   let { data } = await Storyblok.get(`cdn/stories/equipment-catalog/envelope-storage/${slug}`, sbParams);
