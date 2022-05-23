@@ -14,6 +14,9 @@ const footerStyles = [
 const divStyles = [
   'w-full',
   'flex',
+  'flex-col',
+  'gap-4',
+  'sm:flex-row',
   'justify-between',
   'max-w-screen-xl',
   'p-8',
@@ -50,7 +53,7 @@ const Footer = () => {
             </Link>
           </li>
         </ul>
-        <div className="flex items-center">
+        <div className="flex items-center border-t sm:border-none pt-4 sm:pt-0">
           <p className="mr-4">&copy;</p>
           <p>Stumpf Balloons & Banners {new Date().getFullYear()}</p>
         </div>

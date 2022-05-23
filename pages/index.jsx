@@ -41,7 +41,7 @@ const HomePage = () => {
         <link rel="canonical" href={headData.canonicalUrl} />
       </Head>
       <Header />
-      <Hero headerText="Welcome to Stumpf Balloons & Banners" imgSrc="/images/sb-bg-mobile.jpg" imgAlt="Paul flying a home build balloon"/>
+      <Hero headerText="Welcome to Stumpf Balloons & Banners" mediaSrc="/images/extra.jpg" imgAlt="Paul flying a home build balloon"/>
       <main>
         <section>
           <h2>Welcome to the Stumpf Balloons web site and online catalog!</h2>
