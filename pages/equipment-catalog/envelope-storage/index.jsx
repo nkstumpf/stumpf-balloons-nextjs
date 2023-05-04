@@ -10,29 +10,28 @@ import GalleryTile from '@/components/GalleryTile';
 const EnvelopeStorage = ({ story, products }) => {
   const { content } = story;
 
-  const headData = {
-    title: `Stumpf Balloons - ${content.page_name}`,
-    ogTitle: `Stumpf Balloons - ${content.page_name}`,
+  const meta = {
+    title: `Stumpf Balloons & Banners | ${content.page_name}`,
+    canonicalUrl: 'https://www.stumpfballoons.com',
     ogUrl: 'https://www.stumpfballoons.com',
     ogImage: '/images/social-image.jpg',
     ogType: 'website',
     ogDescription:'Hot air ballooning envelope storage, balloon envelope bags, storage solutions',
-    canonicalUrl: 'https://www.stumpfballoons.com',
   };
 
   return (
     <>
       <Head>
-        <title>{`${headData.ogTitle} | Stumpf Balloons`}</title>
+        <title>{meta.title}</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href={meta.canonicalUrl} />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content={headData.ogDescription} />
-        <meta property="og:title" content={`${headData.ogTitle} | Stumpf Balloons`} />
-        <meta property="og:url" content={headData.ogUrl} />
-        <meta property="og:image" content={headData.ogImage} />
-        <meta property="og:type" content={headData.ogType} />
-        <meta property="og:description" content={headData.ogDescription} />
-        <link rel="canonical" href={headData.canonicalUrl} />
+        <meta name="description" content={meta.ogDescription} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:url" content={meta.ogUrl} />
+        <meta property="og:image" content={meta.ogImage} />
+        <meta property="og:type" content={meta.ogType} />
+        <meta property="og:description" content={meta.ogDescription} />
       </Head>
       <Header />
       <main>
@@ -58,11 +57,11 @@ EnvelopeStorage.propTypes = {
 export async function getStaticProps() {
 
   const sbParams = {
-    version: 'draft', // or published
+    version: 'draft'
   };
 
   const products = await Storyblok.get('cdn/stories', {
-    version: 'draft', // or published
+    version: 'draft',
     starts_with: 'equipment-catalog/envelope-storage/'
   });
 
@@ -72,8 +71,7 @@ export async function getStaticProps() {
     props: {
       story: data ? data.story : null,
       products: products ? products.data.stories : null
-    },
-    revalidate: 3600, // revalidate every hour
+    }
   };
 }
 

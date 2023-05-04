@@ -4,35 +4,43 @@ import Header from '@components/Header';
 import Footer from '@components/Footer';
 import Hero from '@components/Hero';
 import Button from '@components/Button';
+import Breadcrumbs from '@components/Breadcrumbs';
 
 const About = () => {
 
-  const headData = {
-    title: 'About',
-    ogTitle: 'Stumpf Balloons & Banners - About Paul',
+  const meta = {
+    title: 'Stumpf Balloons & Banners | About Paul',
+    canonicalUrl: 'https://www.stumpfballoons.com/about',
     ogUrl: 'https://www.stumpfballoons.com/about',
     ogImage: '/images/social-image.jpg',
     ogType: 'website',
-    ogDescription:'About Stumpf Balloons & Banners',
-    canonicalUrl: 'https://www.stumpfballoons.com/about',
+    ogDescription:'Hot air ballooning banners, equipment and repair station since 1975',
   };
+
+  const breadcrumbs = [
+    {
+      name: 'about',
+      href: '/about'
+    }
+  ];
 
   return (
     <>
       <Head>
-        <title>{`${headData.ogTitle} | Stumpf Balloons`}</title>
+        <title>{meta.title}</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href={meta.canonicalUrl} />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content={headData.ogDescription} />
-        <meta property="og:title" content={`${headData.ogTitle} | Stumpf Balloons`} />
-        <meta property="og:url" content={headData.ogUrl} />
-        <meta property="og:image" content={headData.ogImage} />
-        <meta property="og:type" content={headData.ogType} />
-        <meta property="og:description" content={headData.ogDescription} />
-        <link rel="canonical" href={headData.canonicalUrl} />
+        <meta name="description" content={meta.ogDescription} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:url" content={meta.ogUrl} />
+        <meta property="og:image" content={meta.ogImage} />
+        <meta property="og:type" content={meta.ogType} />
+        <meta property="og:description" content={meta.ogDescription} />
       </Head>
       <Header />
       <Hero headerText="About" imgSrc="/images/sb-bg-mobile.jpg" imgAlt="Paul Stumpf" />
+      <Breadcrumbs links={breadcrumbs} />
       <main>
         <section>
           <h2 id="about-paul">About Paul</h2>
